@@ -1,0 +1,247 @@
+
+:root {
+  --point-color1: #e40f18;
+  --point-color2: #009223;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+#wrap {
+  height: 2500px;
+}
+
+.main_slider .swiper {
+  height: 930px;
+}
+.main_slider .swiper a {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  /* background-size:cover를 사용할 수 없으므로 크기 늘려서 처리 (background: url()이 아니기 때문에 */
+  width: 100%;
+  /* 바깥쪽 높이만큼 늘려줌 */
+  height: 100%;
+}
+.main_slider .swiper img {
+  /* 이미지가 줄어들지 않게 하고 창크기가 줄어들 때 좌우로 나가게 함 */
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  /* 슬라이드 화면이 찌그러지지 않도록 길이를 맞춰줄 수 있음 */
+  object-fit: cover;
+}
+.main_slider .swiper .m_img {
+  display: none;
+}
+
+.main_slider .swiper .txt_wrap {
+  max-width: 1264px;
+  width: 100%;
+  padding: 0 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.main_slider .swiper .txt_wrap p {
+  color: #fff;
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+  transform: translateY(-30px);
+  opacity: 0;
+  filter:blur(10px);
+  /* filter: drop-shadow() 사용하면 png이미지 안쪽오브젝트에 그림자 처리됨 */
+}
+.main_slider .swiper .txt_wrap h2 {
+  color: #fff;
+  font-size: 5.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  transform: translateY(50px);
+  opacity: 0;
+  filter:blur(10px);
+}
+.main_slider .swiper .txt_wrap h2::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--point-color1);
+  border-radius: 50%;
+  margin-left: 10px;
+}
+/* 글자가 움직이는 경우 */
+.main_slider .swiper-slide-active .txt_wrap p{
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 1.5s;
+}
+.main_slider .swiper-slide-active .txt_wrap h2{
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 1.5s;
+}
+
+.main_slider .btn_area{
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  z-index: 10;
+}
+.main_slider .btn_area .btn_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  width: 295px;
+  height: 89px;
+  padding-top: 18px;
+  background: url(../images/main_label.png) no-repeat;
+  justify-content: center;
+}
+.main_slider .btn_area .arrow_btn{
+  position: static;
+  margin-top: 0;
+  width: 24px;
+  height: 30px;
+  font-size: 2.4rem;
+  color: #E37886;
+}
+.main_slider .btn_area .arrow_btn::after{
+  display: none;
+}
+.main_slider .btn_area .swiper-pagination {
+  position: static;
+  width: auto;
+  color: #fff;
+  font-size: 2.4rem;
+}
+.main_slider .btn_area .swiper-pagination span{
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.main_slider .btn_area .swiper-pagination span + span {
+  margin-left: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+.main_slider .btn_area .swiper-pagination span + span::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.main_slider .btn_area .toggle_btn {
+  width: 58px;
+  height: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #aaa;
+  font-weight: 500;
+  margin: 20px 0 0 60px;
+}
+
+
+
+
+
+@media (max-width:1200px){
+  .main_slider .swiper{
+    height: 744px;
+  }
+  .main_slider .swiper .txt_wrap p{
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+  }
+  .main_slider .swiper .txt_wrap h2{
+    font-size: 4.7rem;
+  }
+  .main_slider .btn_area .btn_wrap p{
+    width: 236px;
+    height: 71px;
+    background-size: 100%;
+    gap: 0 16px;
+  }
+  .main_slider .btn_area .arrow_btn{
+    width: 19px;
+    height: 27px;
+    font-size: 1.9rem;
+  }
+  .main_slider .btn_area .swiper-pagination {
+    margin-top: -5px;
+  }
+  .main_slider .btn_area .swiper-pagination span {
+    font-size: 1.9rem;
+  }
+  .main_slider .btn_area .swiper-pagination span + span {
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+  .main_slider .btn_area .swiper-pagination span + span::before{
+    height: 14px ;
+    top: 8px;
+  }
+  .main_slider .btn_area .toggle_btn {
+    font-size: 1.2rem;
+    margin: 15px 0 0 45px;
+  }
+}
+
+
+
+
+
+
+@media(max-width:748px){
+  .main_slider .swiper{
+    height: 650px;
+  }
+ .main_slider .swiper .pc_img {
+  display: none;
+ }
+ .main_slider .swiper .m_img{
+  display: block;
+ }
+ .main_slider .swiper .txt_wrap{
+  padding: 0 14px;
+  top: 195px;
+ }
+ .main_slider .swiper .txt_wrap p {
+  font-size: 1.8rem;
+ }
+ .main_slider .swiper .txt_wrap h2{
+  font-size: 2.8rem;
+ }
+ .main_slider .btn_area {
+  bottom: 35px;
+ }
+ .main_slider .btn_area .btn_wrap{
+  width: 166px;
+  height: 54px;
+  padding-top: 8px;
+  gap: 0 10px;
+ }
+ .main_slider .btn_area .arrow_wrap{
+  width: 17px;
+  height: 24px;
+  font-size: 1,7rem;
+ }
+ .main_slider .btn_area .swiper-pagination span{
+  font-size: 1.7rem;
+ }
+ .main_slider .btn_area .toggle_btn {
+  font-size: 1.5rem;
+  margin: 10px 0 0 15px;
+ }
+}

@@ -1,0 +1,348 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #F8C900;
+  --point-color2: #907354;
+  --txt-color-400: #8F98AC;
+  --txt-color-500: #666;
+  --txt-color-600: #212121;
+}
+
+#wrap {
+  height: 1500px;
+}
+
+#header {
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  z-index: 9999;
+}
+
+#header.fixed,
+#header.on {
+  background: #fff;
+}
+#header.fixed .logo a,
+#header.on .logo a {
+  background-image: url(../images/logo.svg);
+}
+
+#header.fixed .lang li.active a,
+#header.on .lang li.active a {
+  color:var(--txt-color-600);
+}
+#header.fixed .lang li + li::before,
+#header.on .lang li + li::before {
+  background:var(--txt-color-600);
+}
+#header.fixed .lang li.active a::before,
+#header.on .lang li.active a::before {
+  background: var(--point-color1);
+}
+#header.fixed .lang a,
+#header.on .lang a {
+  color:var(--txt-color-400);
+}
+
+#header.fixed .lang_wrap .link_btn,
+#header.on .lang_wrap .link_btn {
+  border-color:var(--txt-color-600);
+  color:var(--txt-color-600);
+}
+
+#header.fixed .gnb>li>a,
+#header.on .gnb>li>a {
+  color:var(--txt-color-600);
+}
+
+#header .inner {
+  max-width: 1920px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+#header .logo {
+  width: 146px;
+  left: 20px;
+  position: absolute;
+  top: 50%;
+}
+#header .logo a{
+  display: block;
+  background: url(../images/logo-w.svg) no-repeat; 
+  height: 35px;
+}
+#header .lang_wrap{
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  z-index: 10;
+  display: flex;
+  gap: 0 50px;
+  align-items: center;
+}
+#header .lang {
+  display: flex;
+}
+
+
+#header .gnb_wrap {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li{
+  padding:0 45px;
+}
+#header .gnb>li:hover>a {
+  color:#142345;
+  font-weight: 700;
+}
+#header .gnb>li>a {
+  display: block;
+  line-height: 100px;
+  font-size: 18px;
+  color:#fff;
+  position: relative;
+}
+#header .gnb>li>a::after {
+  content: '';
+  position: absolute;
+  left:50%;
+  bottom: -12px;
+  width:24px;
+  height: 24px;
+  margin-left:-12px;
+  background: url(../images/on.png) no-repeat;
+  z-index: 10;
+  /* 요소중심기준으로 크기변경시 */
+  transform: scale(0);
+  transition: all 0.5s;
+}
+#header .gnb>li:hover>a::after {
+  transform: scale(1);
+}
+#header .gnb>li:hover .depth2 {
+  display: flex; 
+}
+#header .gnb .depth2 {
+  position: absolute;
+  left:0;
+  top:100px;
+  width:100%;
+  height: 100px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #F9F9F9;
+}
+#header .gnb .depth2 li {
+  padding:0 25px;
+}
+#header .gnb .depth2 a {
+  font-weight: 500;
+  color:rgba(0,0,0,0.5);
+  transition: all 0.5s;
+}
+#header .gnb .depth2 a:hover {
+  color:rgba(0,0,0,1);
+}
+
+/* 헤더 분기점 */
+@media (max-width:1650px) {
+  #header .logo {
+    left:20px;
+  }
+  #header .lang_wrap {
+    right:20px;
+    gap:0 20px;
+  }
+  #header .gnb>li {
+    padding:0 25px;
+  }
+}
+
+#header .lang_wrap .open_btn {
+  display: none;
+}
+#header .m_gnb_area {
+  display: none;
+}
+
+
+.main_slider {
+  position: relative;
+}
+.main_slider .slide {
+  height: 1000px;
+}
+.main_slider .slide video {
+  width:100%;
+  height: 100%;
+  /* background-size:cover처럼 부모영역에
+  요소자체를 가득채워주며 가로, 세로중 한쪽을 맞추고 큰쪽은 가려줌 */
+  object-fit: cover;
+}
+.main_slider .img_wrap {
+  position: absolute;
+  left:0;
+  bottom: 0;
+  /* 포지션엡솔이면 크기가 줄어들기때문 */
+  width:100%;
+}
+.main_slider .img_wrap img {
+  /* max-width:100%는 원래크기보다 안커짐 */
+  width:100%;
+}
+
+
+
+
+
+/* 테블릿분기점 */
+@media (max-width:1200px) {
+  #header .inner {
+    height: 80px;
+  }
+  #header .logo {
+    width:127px;
+  }
+  #header .logo a {
+    height: 30px;
+  }
+  
+  #header .lang_wrap .open_btn {
+    display: flex;
+    width:26px;
+    height: 26px;
+    border:none;
+    flex-wrap: wrap;
+    gap:2px;
+    background: none;
+  }
+  #header .lang_wrap .open_btn .rect {
+    width:12px;
+    height: 12px;
+    background: #fff;
+  }
+
+  #header.fixed .lang_wrap .open_btn .rect,
+  #header.on .lang_wrap .open_btn .rect {
+    background: var(--txt-color-600);
+  }
+
+  #header .gnb_wrap {
+    display: none;
+  }
+
+  #header .m_gnb_area {
+    display: block;
+    position: fixed;
+    right:0;
+    top:0;
+    max-width:320px;
+    /* fixed면 내용만큼 줄어들기 때문에 */
+    width:calc(100% - 30px);
+    /* 창기준이므로 100%가능 */
+    height: 100%;
+    background: #fff;
+    z-index: 10;
+    padding:123px 20px 60px 50px;
+    overflow: auto;
+    /* box-shadow: x y 블러크기 [offset] 색 */
+    box-shadow: -5px 0 10px rgba(0,0,0,0.1);
+    transform: translatex(100%);
+    transition: all 0.5s;
+  }
+  #header .m_gnb_area.on {
+    transform: translatex(0);
+  }
+  #header .m_gnb_area .close_btn {
+    position: absolute;
+    right:10px;
+    top:10px;
+    width:40px;
+    height: 40px;
+    background: none;
+    border:none;
+  }
+  #header .m_gnb_area .close_btn .line {
+    position: absolute;
+    left:19px;
+    top:7px;
+    width:2px;
+    height: 28px;
+    background: #5b606a;
+    transform: rotateZ(45deg);
+  }
+  #header .m_gnb_area .close_btn .line:nth-child(2) {
+    transform: rotateZ(-45deg);
+  }
+
+  #header .m_gnb>li {
+    position: relative;
+  }
+  #header .m_gnb>li::before {
+    content: '';
+    position: absolute;
+    left:-50px;
+    top:22px;
+    width:0px;
+    height: 2px;
+    background: #142345;
+    transition: all 0.5s;
+  }
+  #header .m_gnb>li:hover::before {
+    /* 한쪽방향으로 늘어날경우 */
+    width:30px;
+  }
+  #header .m_gnb>li>a {
+    color:#313741;
+    letter-spacing: -0.03em;
+    display: block;
+    line-height: 50px;
+  }
+  #header .m_gnb .depth2 {
+    /* display: none; */
+  }
+  #header .m_gnb .depth2 a {
+    display: block;
+    line-height: 32px;
+    color:var(--txt-color-400);
+  }
+}
+
+
+
+
+
+
+/* 모바일분기점 */
+@media (max-width:767px) {
+  #header .inner {
+    height: 60px;
+  }
+  #header .logo {
+    width:106px;
+  }
+  #header .logo a {
+    height:25px;
+  }
+  #header .lang a {
+    font-size: 14px;
+  }
+  #header .lang_wrap .link_btn {
+    display: none;
+  }
+
+  .main_slider .slide {
+    height: 630px;
+  }
+}

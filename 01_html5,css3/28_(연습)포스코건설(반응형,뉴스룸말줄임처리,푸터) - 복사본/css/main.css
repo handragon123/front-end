@@ -1,0 +1,319 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #00A5E5;
+  --point-color2: #907354;
+  --txt-color-400: #9e9e9e;
+  --txt-color-500: #666;
+  --txt-color-600: #101010;
+}
+
+#wrap {
+  height: 1500px;
+}
+
+.main_news {
+  padding-top: 70px;
+}
+.main_news .inner{
+  max-width: 1200px;
+  /* 테블릿여백 미리줌 */
+  padding: 0 25px 100px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e7e7e7;
+  position: relative;
+}
+.main_news .inner::after{
+  content: '';
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 0;
+  height: 1px;
+}
+
+/* 제목공통 */
+.main_tit{
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--txt-color-600);
+  margin-bottom: 85px;
+}
+
+.main_news .news{
+  display: flex;
+  gap: 0 33px;
+}
+.main_news .news li {
+  width: calc(100% / 3);
+}
+ /* 이미지 가로 세로 비율1:1 */
+  /* padding-top: 100%; */
+  /* 이미지 가로 세로 비율 16:9 */
+  /* padding-top: 56.25%; */
+    /* 부모가로길이 기준으로 높이를 비율로 계산하여 가로와 높이가 같이 변경되게함 */
+
+ .main_news .news .img_wrap{
+  position: relative;
+  padding-top: 56.7%;
+}
+.main_news .news .img_wrap img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* 작은 이미지 칸에 큰 이미지 넣었을떄 꾸김 방지 */
+  object-fit: cover;
+}
+  .main_news .news .img_wrap iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+/* ios 14.8이하에서 호환이 되지않아 현재 잘 사용하지 않음 나중에 사용할듯 */
+/* .main_news .news .img_wrap {
+  border: 2px solid red;
+  aspect-ratio: 16 / 9;
+}
+.main_news .news .img_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.main_news .news .txt_wrap {
+  padding-top: 23px;
+}
+.main_news .news .category {
+  font-size: 14px;
+  color: #9e9e9e;
+  margin-top: 10px;
+}
+
+.main_news .news .category span + span{
+  /* 인라인, 인라인블럭사이는 자간에 의해 4px여백이 이미존재함 */
+  margin-left: 6px;
+  padding-left: 10px;
+  position: relative;
+}
+.main_news .news .category span + span::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 1px;
+  height: 11px;
+  background: #ddd;
+}
+.main_news .news a{
+  font-size: 22px;
+  color: #000;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  /* transition는 hover 전에 거는것이 일반적이며 
+  마우스올렸을때와 뗏을때 동일한 애니메이션 적용 */
+  transition: all 0.5s;
+}
+.main_news .news a:hover{
+  color: var(--point-color1);
+}
+
+.main_news .more_btn {
+  position: absolute;
+  right: 25px;
+  top: 35px;
+  font-size: 20px;
+  color: #000;
+}
+.main_news .more_btn::after{
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../images/icon-plus-blue.svg) no-repeat 0 0 / 100%;
+  margin-left: 15px;
+  /* 인라인 블럭 구조에서 수직 방향으로 위치 조정시사용 */
+  /* vertical-align:-5px; */
+}
+
+.main_etc{
+  padding: 130px 0 200px;
+  border: 1px solid red;
+}
+.main_etc .inner{
+  display: flex;
+  max-width: 1250px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+.main_etc .etc{
+  position: relative;
+}
+.main_etc .etc .tit_wrap{
+  position: absolute;
+  left:10%;
+  right:10%;
+  top:10%;
+}
+.main_etc .etc .tit_wrap h3{
+  font-size: 48px;
+  color: #000;
+  font-weight: 700;
+}
+.main_etc .etc .tit_wrap p{
+  font-size: 32px;
+  color: #000;
+  line-height: 1.4;
+  margin: 10px 0 20px;
+}
+.main_etc .etc .tit_wrap span{
+  font-size: 26px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* 인재채용 부분 */
+.main_etc .recruit .list{
+  display: flex;
+  margin-top: 100px;
+  gap:0 20px;
+}
+.main_etc .recruit .list li {
+  width: calc(100% / 3);
+}
+.main_etc .recruit .list a {
+  height: 224px;
+  display: flex;
+  background: rgba(0, 165, 229, 0.4);
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.main_etc .recruit .list a::before{
+  content: '';
+  width: 47px;
+  height: 52px;
+  background: url(../images/icon_main_recruit1.png) no-repeat 0 0 / 100%;
+}
+.main_etc .recruit .list li:nth-child(2) a::before{
+  background-image: url(../images/icon_main_recruit2.png);
+}
+.main_etc .recruit .list li:nth-child(3) a::before{
+  background: url(../images/icon_main_recruit3.png);
+}
+
+.main_etc .recruit .tit_wrap h3{
+  color: #fff;
+}
+.main_etc .recruit .tit_wrap p{
+  color: #fff;
+}
+
+
+/* 테블릿 분기점 */
+@media (max-width:1200px) {
+  .main_tit {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  .main_news .news {
+    gap: 0 20px;
+  }
+  .main_news .more_btn{
+    top: 18px;
+    font-size: 18px;
+  }
+  .main_etc .etc .tit_wrap h3{
+    font-size: 38px;
+  }
+  .main_etc .etc .tit_wrap p {
+    font-size: 24px;
+    margin:0;
+  }
+  .main_etc .etc .tit_wrap span{
+    font-size: 26px;
+  }
+  .main_etc .recruit .list {
+    margin-top: 40px;
+  }
+  .main_etc .recruit .list a{
+    height: 164px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 모바일 분기점 */
+@media (max-width:767px) {
+  .main_news {
+    padding-top: 48px;
+  }
+  .main_news .inner {
+    padding: 0 20px 48px;
+  }
+  .main_news .news {
+    flex-wrap: wrap;
+    gap: 30px 0;
+  }
+  .main_news .news li{
+    width: 100%;
+  }
+  .main_news .more_btn{
+    top:18px;
+    font-size: 18px;
+  }
+  .main_etc {
+    padding: 30px 0;
+  }
+  .main_etc .inner {
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  .main_etc .etc{
+    width: 100%;
+    height: 416px;
+    overflow: hidden;
+
+  }
+  .main_etc .etc img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .main_etc .etc .tit_wrap h3{
+    font-size: 28px;
+  }
+  .main_etc .etc .tit_wrap p{
+    font-size: 18px;
+  }
+  .main_etc .recruit .list{
+    flex-direction: column;
+    gap: 10px 0;
+    margin-top: 10px;
+  }
+  .main_etc .recruit .list li{
+    width: 100%;
+  }
+  .main_etc .recruit .list a{
+    flex-direction: row;
+    height: auto;
+    justify-content: flex-start;
+    padding: 10px 10px 10px 20px;
+    gap: 0 10px;
+    background: var(--point-color1);
+  }
+}

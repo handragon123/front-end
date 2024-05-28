@@ -1,0 +1,6 @@
+한글제목: 넥슨고딕
+전체본문: 시스템폰트
+
+3칸 954 + 50 = 1004
+4칸 1280 + 50 = 1330
+font-family: 'NEXONLv1Gothic', sans-serif;

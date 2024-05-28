@@ -1,0 +1,101 @@
+swiper사이트 접속후 
+get started 클릭
+download들어가서 버전 8.4.7로 편집
+https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js
+https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css
+들어가 다른이름으로 js, css파일 저장
+
+사이트에서 add swiper HTML Layout에서 그대로 복붙
+<div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+js파일 들어가서 
+Initialize Swiper 접속후 코드 복붙
+
+let swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical', - (방향 세로 안쓰므로 삭제)
+  loop: true, -(슬라이더 한바퀴 돌게하는 옵션)
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  스크롤바 부분 사용안하므로 삭제
+});
+
+- 스와이퍼 함수 옵션
+speed = 슬라이더 애니메이션 시간
+effect = 슬라이더 넘어갈때 효과
+autoplay: { delay: 5000, } , = 5초후 자동으로 슬라이더
+사용시 loop=true; 꼭 사용해야함
+ pagination: {
+      clickable: true,  - 아래 버튼 클릭시 화면전환기능
+    },
+
+
+슬라이더버튼
+-스와이퍼 버튼 .swiper-pagination span에서 설정가능
+-스와이퍼 버튼 효과  active 넣고 설정
+.swiper-pagination .swiper-pagination-bullet-active
+
+
+
+스와이퍼 버튼효과
+1. 기존 버튼 after적용되있어서 보이지 않게 하려면 꺼줘야함
+2. 위치 선정시  
+prev버튼 next 버튼 같이 먹어서 next는 left:auto로 풀어줘야함
+
+
+
+슬라이더 버튼 클릭시 슬라이더 멈춤,재생 효과
+ let toggleSlide = true;
+
+  $('.main_slider .toggle_btn').on('click', function () {
+    $(this).toggleClass('on');
+    // 슬라이더 멈춤 버튼 클릭시 슬라이더 멈춤기능
+    if (toggleSlide) {
+      mainSlider.autoplay.stop();
+      toggleSlide = false;
+    } else {
+      mainSlider.autoplay.start();
+      toggleSlide = true;
+    }
+  });
+
+
+
+한쪽슬라이더에 여러개띄우는 효과
+    slidesPerView: 
+
+
+tab 메뉴 슬라이더 
+.main_menu .swiper_wrap{
+  position: relative;
+  border: 4px solid red;
+--height 0 값
+  height: 0;
+  overflow: hidden;
+}
+.main_menu .swiper_wrap.active{
+--height 줘서 보이게
+  height: auto;
+  overflow: visible;
+}
+

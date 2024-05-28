@@ -1,0 +1,38 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #03c75a;
+  --point-color2: #ed1c24;
+  --txt-color-400: #606060;
+  --txt-color-500: #404040;
+  --txt-color-600: #101010;
+}
+
+.contents .inner {
+  max-width:1200px;
+  height: 1000px;
+  margin:0 auto;
+  border:5px solid red;
+  padding:0 30px;
+}
+
+/* 소셜미디어 */
+.social .sns_menu {
+  border:4px solid blue;
+  /* position: relative처럼 원래위치가 막힘 */
+  position: sticky;
+  /* 처음에는 부모와 같이 스크롤되며 뷰포트기준으로
+  top위치에 도달하면 고정되고 부모가 뷰포트를 벗어나면 같이 스크롤됨 */
+  top:120px;
+  width:300px;
+}
+.social .sns_menu a {
+  font-size: 30px;
+}
+.social .sns_menu li.active a {
+  color:#0042bf;
+  font-size: 48px;
+}
+
+.social .txt_wrap {
+  padding-left:400px;
+}

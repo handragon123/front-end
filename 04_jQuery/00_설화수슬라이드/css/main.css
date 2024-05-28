@@ -1,0 +1,80 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #4e2bf4;
+  --point-color2: #009223;
+  --txt-color-400: #999;
+  --txt-color-500: #333;
+  --txt-color-600: #111;
+}
+
+#wrap {
+  height: 2500px;
+}
+
+.with_slider .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.with_slider a{
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+
+.with_slider .img_wrap {
+  position: relative;
+}
+.with_slider .img_wrap::after {
+  content: '';
+  position: absolute;
+  top: 82%;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: 0;
+}
+.with_slider a:hover .img_wrap::after {
+  opacity: 1;
+}
+
+.with_slider .img_wrap i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  color: black;
+  display: -webkit-box;
+}
+.with_slider a:hover .txt_wrap {
+  opacity: 1;
+}
+.with_slider .txt_wrap{
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ border: 1px solid #fff;
+ background-color: #fff;
+ padding: 5px 0;
+ text-align: center;
+ width: 100%;
+ opacity: 0;
+}
+
+.with_slider .txt_wrap strong {
+  color: #323a45;
+  padding: 5px 10px;
+}
+.with_slider .txt_wrap p {
+  color: #4d5866;
+  display: block;
+  font-size: 12px;
+  padding: 0px 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}

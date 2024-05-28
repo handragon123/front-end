@@ -1,0 +1,24 @@
+import styles from './TodoList.module.css';
+import TodoItem from './TodoItem';
+
+export default function TodoList({
+  todos,
+  setTodos,
+  setToggleEdit,
+  setSelectedTodo,
+}) {
+  return (
+    <ul className={styles.todo_list}>
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          todos={todos}
+          setTodos={setTodos}
+          setToggleEdit={setToggleEdit}
+          setSelectedTodo={setSelectedTodo}
+        />
+      ))}
+    </ul>
+  );
+}

@@ -1,0 +1,15 @@
+.todo_add input[type='text'] {
+  width: calc(100% - 80px);
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.todo_add button {
+  height: 40px;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+  padding: 0 10px;
+  border: none;
+  margin-left: 10px;
+}

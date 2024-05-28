@@ -1,0 +1,26 @@
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #ff601f;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 'mim-width' 필요없음 */
+#wrap {
+  height: 1500px;
+}
+
+h1,h2,h3,h4 {
+  font-size: 100px;
+}
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 700;
+}
+h4{
+  font-family: 'Akrobat', sans-serif;
+}

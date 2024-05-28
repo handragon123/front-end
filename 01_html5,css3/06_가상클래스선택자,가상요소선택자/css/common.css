@@ -1,0 +1,84 @@
+/* 전체선택자를 통한 초기화 */
+* {
+  margin:0;
+  padding:0;
+}
+
+/* 링크걸린 a태그 */
+/* a:link {
+  color:#000;
+} */
+/* 네이버기사 클릭후 다른페이지 방문하고 돌아왔을때 컬러변경하여 클릭했음을 알려줌 */
+/* a:visited {
+  color:gray;
+}
+a:hover {
+  color:red;
+}
+a:active {
+  color:blue;
+} */
+
+a {
+  color:#000;
+  text-decoration: none;
+}
+
+#header .list li:first-child {
+  /* border:2px solid; */
+}
+#header .list li:nth-child(3) {
+  border:2px solid black;
+}
+#header .list li:last-child {
+  border:2px solid black;
+}
+/* 짝수번째 형제요소 선택 */
+/* #header .list li:nth-child(2n) {
+  background: red;
+}
+#header .list li:nth-child(2n+1) {
+  background: green;
+} */
+/* 짝수번째 선택 */
+#header .list li:nth-child(even) {
+  background: red;
+}
+#header .list li:nth-child(odd) {
+  background: green;
+}
+
+/* 리스트중 마지막 리스트를 제외하고 글자색 변경 */
+#header .list li:not(:last-child) {
+  color:yellow;
+}
+
+/* 버튼 공통 */
+.btn {
+  padding:0 10px;
+  font-size: 16px;
+  line-height: 40px;
+  background: #333;
+  color:#fff;
+  border:none;
+  cursor: pointer;
+}
+.point_btn {
+  background: #009223;
+  line-height: 50px;
+  padding:0 20px;
+  border-radius: 25px;
+}
+
+/* 속성선택자로 공통스타일 만들기 */
+/* class속성에 label_btn을 포함하는 요소 선택 */
+[class*=label_btn] {
+  color:red;
+  line-height: 40px;
+  padding:0 20px;
+  font-size: 15px;
+}
+.primary_label_btn {
+  background: #009223;
+  color:#fff;
+}

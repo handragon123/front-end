@@ -1,0 +1,4 @@
+블로그에서 자바스크립트 복사하는법
+f12누르고 설정키 누르고 
+스크롤 내리면서
+Debugger > disable javascript 체크

@@ -1,0 +1,112 @@
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #ff601f;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  min-width: 1280px;
+  height: 1500px;
+}
+
+.main_slider {
+  height: 560px;
+  background: url(../images/visual_01.jpg) no-repeat 50% 50%;
+}
+
+.main_intro {
+  width: 1200px;
+  margin: -53px auto 0;
+  background: #ddd;
+  text-align: center;
+  padding: 37px 0;
+}
+
+.main_intro p {
+  font-size: 24px;
+  color: var(--txt-color-600);
+}
+
+.main_intro strong {
+  color: var(--point-color1);
+  font-weight: 700;
+}
+/* main_intro와 15px공백만듬 */
+.main_business {
+  padding-top: 15px;
+}
+/* 양옆여백 균형맞춰주고 높이 세팅 */
+.main_business .business_tab {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+}
+/* 3개의li 3등분함 */
+.main_business .business_tab li {
+  width: calc(100% / 3);
+}
+/* 3개의 li내용을 모두 아래 형식처럼 바꿔줌 */
+.main_business .business_tab a{
+  display: block;
+  height: 178px;
+  background: #f7f7f7;
+  padding: 43px 15px 0 130px;
+  position: relative;
+}
+/* li 1 번 이미지 삽입을 위해 before 사용후 이미지 크기,위치 조정 */
+.main_business .business_tab a::before{
+  content: '';
+  position:absolute;
+  left: 40px;
+  top: 40px;
+  width: 45px;
+  height: 43px;
+  background: url(../images/ico-home-type.png);
+}
+/* 이미지 파일이 모두 한파일에서 위치가 다르므로 sprite cow를 사용하여 이미지 위치를 조정 */
+/* li2번 이미지 삽입을 위해 0, -39px로 조정 */
+.main_business .business_tab li:nth-child(2) a::before{
+  background-position: 0 -39px;
+}
+/* li3번 이미지 삽입을 위해 0, -85px로 조정 */
+.main_business .business_tab li:nth-child(3) a::before{
+  background-position: 0 -85px;
+}
+/* active 효과시 배경 사진값 변하는 기능 */
+.main_business .business_tab li.active a{
+  background: url(../images/bg-home-type.png) no-repeat;
+}
+/* active 효과시 아이콘 사진값 변하는 기능 */
+.main_business .business_tab li.active a::before{
+  background-position: -55px;
+}
+/* avtive 효과시 li박스 모양에 그림자 설정기능 */
+.main_business .business_tab li.active {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+/* active 효과시 li박스내에 h3 글자색 바뀜과 그림자 설정 */
+.main_business .business_tab li.active h3 {
+  color: #fff;
+  text-shadow: 1px 1px rgba(0,0,0,1);
+}
+/* active 효과시 li박스내에 a 글자색 바뀜과 그림자 설정 */
+.main_business .business_tab li.active a{
+  color: #fff;
+  text-shadow: 1px 1px rgba(0,0,0,1);
+}
+/* li와li사이 6px 마진 생성 */
+.main_business .business_tab li+li{
+  margin-left: 6px;
+}
+/* 모든 li의 h3 부분을 설정 */
+.main_business .business_tab h3 {
+  font-size: 24px;
+  color: var(--txt-color-600);
+}
+/* 모든 li의 h3와 p 부분의 공백 10px 생성 */
+.main_business .business_tab p {
+  margin-top: 10px;
+}

@@ -1,0 +1,5 @@
+반복문
+- for(일반반복문)
+- forEach (배열전용, break문 사용불가)
+- for(let key in obj) {}(객체 전용)
+- for(let v of arr) { }(배열전용, break가능) 

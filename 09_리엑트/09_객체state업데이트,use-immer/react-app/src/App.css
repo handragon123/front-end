@@ -1,0 +1,8 @@
+.app {
+  padding: 20px;
+}
+
+.btn.on {
+  color: #fff;
+  background: #000;
+}

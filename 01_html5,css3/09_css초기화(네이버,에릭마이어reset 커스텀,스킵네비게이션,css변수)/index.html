@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- 적응형 데스크탑일 경우 뷰포트크기 = 기본그리드 + 80px -->
+  <meta name="viewport" content="width=1280">
+  <title>text</title>
+  <!-- 공통css먼저 연결해야함 -->
+
+  
+  <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+</head>
+<body>
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <main id="container">
+      <section class="main_section1">
+        <div class="inner">
+          <h2>메인 섹션</h2>
+          <p class="txt">문단일부에 <strong>포인트 컬러</strong> 있을 경우</p>
+          <button type="button">버튼</button>
+          <a href="#">탭했을때 컬러보임</a>
+          <form>
+            <fieldset>
+              <legend>로그인</legend>
+              <input type="text" title="아이디">
+              <input type="password" title="비밀번호">
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      <section class="main_section2">
+        <div class="img_wrap">
+          <a href="#">
+            <img src="images/banner.jpg" alt="배너">
+          </a>
+        </div>
+        <div class="img_wrap">
+          <a href="#">
+            <img src="images/banner.jpg" alt="배너">
+          </a>
+      </section>
+      <iframe src="http://ossamuiux.com"></iframe>
+  <textarea></textarea>
+      <section class="main_etc">
+        <h2 class="blind" >기타 링크</h2>
+        <p>주변의 내용</p>
+        <input type="text" placeholder="검색어 연결">
+        <!-- 모바일 키패드ui를 돋보기로 바꿔줌 AOS만 됨-->
+        <input type="search">
+        <!-- inputmode= "numeric" iOS 숫자키패드 추가 속성 -->
+        <input type="number" inputmode="numeric">
+      </section>
+      <section class="main_section3">
+        <div class="checkbox_wrap">
+          <input id="check1" class="blind" type="checkbox">
+          <label for="check1">동의합니다</label>
+        </div>
+        <!-- for로 아이디연결 -->
+        <div class="checkbox_wrap">
+          <input id="check2" class="blind" type="checkbox">
+          <label for="check2">동의합니다</label>
+        </div>
+        <a class="btn" href="#">링크 버튼</a>
+        <button class="btn open_btn type="button">메뉴 열기</button>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

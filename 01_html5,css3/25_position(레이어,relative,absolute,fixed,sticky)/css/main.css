@@ -1,0 +1,90 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #03c75a;
+  --point-color2: #ed1c24;
+  --txt-color-400: #606060;
+  --txt-color-500: #404040;
+  --txt-color-600: #101010;
+}
+
+#wrap {
+  height:4500px;
+}
+
+#header {
+  background: #ddd;
+  /* 포지션 fixed걸면 크기가 줄어들며 블럭이 됨 */
+  /* 창기준으로 고정하여 스크롤시 뷰포트에 계속 보이도록함 */
+  position: fixed;
+  left:0;
+  top: 0;
+  width:100%;
+  /* 헤더는 스크롤시 다른포지션요소보다 무조건 위에 있어야하므로 z-index크게 걸어야함 */
+  z-index: 9999;
+}
+#header .inner {
+  max-width:1340px;
+  padding:0 30px;
+  height: 300px;
+  margin:0 auto;
+  border:1px solid red;
+  /* 엡솔요소의 바깥요소에 position속성이 있으면 기준 */
+  position: relative;
+}
+
+/* 포지션엡솔의 기준은 자신을 먼저 감싼 요소의 position속성이 기준임됨 */
+#header .logo {
+  border:5px solid black;
+  /* 제자리에서 공중에 뜸(레이어) */
+  /* 위치속성을 안적으면 원래위치가 기준이며 원래위치는 상황에따라 변경될 수 있다 */
+  position: absolute;
+  /* 위치속성을 적으면 기준요소를 따라 이동함 */
+  /* 바깥요소에 기준이 없을경우 창이 기준임 */
+  /* 양수값이면 기준안으로 음수면 바깥으로 벗어남 */
+  /* 포지션엡솔은 레이어이므로 부모 패딩 적용안됨 */
+  /* 포지션요소의 기준점을 양방향으로 잡으면 크기지정가능 */
+  /* 포지션엡솔이면 크기가 내용만큼 줄어들며 블럭이 됨 */
+  left:30px;
+  /* right:30px; */
+  bottom:50px;
+  /* bottom:50px; */
+  /* 포지션요소의 겹친순서 변경 */
+  z-index: 10;
+}
+#header p {
+  background: yellowgreen;
+  position: absolute;
+  left:0;
+  bottom:30px;
+  font-size: 30px;
+  /* 포지션요소의 겹친순서이며 변경가능 */
+  z-index: auto;
+}
+
+#container {
+  padding-top:300px;
+}
+.main_slider {
+  border:10px solid red;
+  /* 부모안의 요소가 포지션일경우 부모의 높이는 0이됨 */
+  height:300px;
+  /* 자신의 원래위치가 막힌상태에서 공중에 띄움 */
+  /* 포지션엡솔의 기준을 줄때 사용 */
+  /* 기준줄때만 사용해야하며 위치속성적으면 안됨 */
+  position: relative;
+}
+.main_slider .slide {
+  height: 300px;
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  font-size: 100px;
+}
+
+.main_news {
+  border:10px solid yellowgreen;
+}
+.main_news h2 {
+  font-size: 100px;
+}

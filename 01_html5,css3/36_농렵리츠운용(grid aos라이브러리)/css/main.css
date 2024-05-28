@@ -1,0 +1,231 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ffb300;
+  --point-color2: #32a13c;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+#wrap {
+  height: 2500px;
+}
+
+.main_introduce {
+  padding: 130px 0;
+}
+
+.main_introduce .inner {
+  max-width: 1340px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.main_introduce .main_tit {
+  position: absolute;
+  left: 50px;
+  top :0;
+}
+
+.main_tit h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--txt-color-600);
+}
+.main_tit p {
+  margin-top: 28px;
+  line-height: 1.82;
+}
+.main_tit .btn_wrap {
+  margin-top: 34px;
+}
+.main_tit .btn_wrap .btn {
+  margin-right: 10px;
+}
+
+.main_introduce .introduce {
+  max-width: 1060px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  grid-template-areas: 
+    '. . . list1'
+    '. . list2 list3'
+    '. list4 list5 list6'
+    'list7 list8 list9 .';
+}
+.main_introduce .introduce a {
+  display: block;
+  background:#ddd;
+  height: 180px;
+  border-radius: 20px;
+  padding: 28px 18px 28px 28px;
+  position: relative;
+  transition: box-shadow 0.5s, transform 0.5s background-color 0.5s;
+}
+.main_introduce .introduce a::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 80px;
+  height: 80px;
+  background: url(../images/ico_family08.svg)no-repeat 50% 50%;
+}
+.main_introduce .introduce strong {
+  font-style: 2rem;
+  font-weight:700;
+  color: var(--txt-color-600);
+}
+.main_introduce .introduce span {
+  padding-right:24px ;
+  position: relative;
+  display: inline-block;
+}
+.main_introduce .introduce span::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/ico_family_arrow.svg) no-repeat 0 0 / 100%;
+}
+.main_introduce .introduce li:nth-child(1) {
+  grid-area:list1;
+}
+.main_introduce .introduce li:nth-child(2) {
+  grid-area:list2;
+}
+.main_introduce .introduce li:nth-child(3) {
+  grid-area:list3;
+}
+.main_introduce .introduce li:nth-child(4) {
+  grid-area:list4;
+}
+.main_introduce .introduce li:nth-child(5) {
+  grid-area:list5;
+}
+.main_introduce .introduce li:nth-child(6) {
+  grid-area:list6;
+}
+.main_introduce .introduce li:nth-child(7) {
+  grid-area:list7;
+}
+.main_introduce .introduce li:nth-child(8) {
+  grid-area:list8;
+}
+.main_introduce .introduce li:nth-child(9) {
+  grid-area:list9;
+}
+.main_introduce .introduce br {
+  display: none;
+}
+
+
+
+/* 데스크탑만 hover 효과 */
+@media (min-width:1201px) {
+  .main_introduce .introduce li:hover {
+    box-shadow: 4px 12px 12px 6px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+    background: #f5f5f5;
+  }
+  .main_introduce .introduce a:hover strong {
+    color: var(--point-color2);
+  }
+  .main_introduce .introduce a:hover strong span::after {
+    background-image: url(../images/ico_family_arrow_green.svg);
+  }
+}
+
+
+
+
+
+
+
+@media(max-width:1200px) {
+  .main_tit h2 {
+    font-size: 2.9rem;
+  }
+  .main_tit p {
+    font-size: 1.5rem;
+  }
+  .main_tit .btn_wrap .btn {
+    font-size: 1.5rem;
+  }
+
+  .main_introduce .inner {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .main_introduce .main_tit {
+    position: static;
+    width: 100%;
+  }
+  .main_introduce .introduce {
+    width: 100%;
+  }
+  .main_introduce .introduce a {
+    height: 162px;
+    padding: 20px;
+  }
+  .main_introduce .introduce br {
+    display: block;
+  }
+  .main_introduce .introduce strong {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
+
+@media(max-width:767px) {
+  .main_introduce {
+    padding: 60px 0;
+  }
+  .main_introduce .inner {
+    padding: 0 20px;
+  }
+  .main_tit h2 {
+    font-size: 2.7rem;
+  }
+  .main_tit p br {
+    display: none;
+  }
+  .main_tit .btn_wrap .btn {
+    font-size: 1.4rem;
+    height: 45px;
+    padding: 0 22px;
+    margin-bottom: 10px;
+  }
+  .main_tit .btn_wrap .btn::after {
+    width: 17px;
+    height: 17px;
+  }
+
+  .main_introduce .introduce {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "list1 list2"
+        "list3 list4"
+        "list5 list6"
+        "list7 list8"
+        "list9 .";
+  }
+  .main_introduce .introduce a {
+    height: 125px;
+  }
+  .main_introduce .introduce a::after {
+    width: 54px;
+    height: 54px;
+    background-size: 100%;
+  }
+}

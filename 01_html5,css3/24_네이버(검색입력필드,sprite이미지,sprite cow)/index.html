@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- 반응형, 적응형 모바일 뷰포트세팅 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 적응형 데스크탑일 경우 뷰포트크기 = 기본그리드 + 80px -->
+  <!-- <meta name="viewport" content="width=1340"> -->
+  <!-- iOS 사파리 전화번호형식 색상변경 방지 -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
+  <title>네이버</title>
+  <!-- 구글웹폰트, link태그방식이 @import보다 빠름
+  웹폰트를 가장 먼저 연결해야함, preconnect로 브라우저에게 다운로드할 웹폰트를 미리 알려 다운로드를 좀더 빠르게함 -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+</head>
+<body>
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <header id="header">
+      <div class="inner">
+        <div class="search_area">
+          <form action="#">
+            <fieldset>
+              <legend>검색</legend>
+              <div class="search_inner">
+                <h1 class="logo">
+                  <a href="index.html">
+                    <img src="images/svgexport-1.svg" alt="네이버">
+                  </a>
+                </h1>
+                <input id="query" type="search" title="검색어를 입력해 주세요." placeholder="검색어를 입력해 주세요." maxlength="255" autocomplete="off">
+                <!-- 입력필드 데이터 전송 -->
+                <button type="submit" class="search_btn">
+                  <span class="blind">검색</span>
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </header>
+  </div>
+</body>
+</html>

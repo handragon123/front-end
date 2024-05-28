@@ -1,0 +1,137 @@
+/* 전체선택자를 통한 초기화 */
+* {
+  margin:0;
+  padding:0;
+}
+
+a {
+  color:#333;
+  /* 밑줄빼기 */
+  text-decoration: none;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 폼요소와 테이블은 브라우저가 서체를 변경하기 때문에 따로 선언 */
+/* 폼의 기본 설정을 변경 설정가능하다 */
+body, button, input, textarea, section, table {
+  /* font 축약형 사용시 보이지않는 기본값이 적용되므로 사용금지, 반드시 개별속성에 사용 */
+  /* 시스템폰트일때는 영문, 한글 모두입력해야함 */
+  /* font-family:'바탕','batang', serif; */
+  /* sans-serif는 고딕체를 의미하며 앞쪽 폰트가 없을 경우 시스템 기본 고딕체로 표현됨 */
+  /* font-family:'맑은 고딕','malgun gothic', sans-serif; */
+  /* 시스템에 있는 고딕체를 사용하려면 아래같이 작성 */
+  /* ,가 들어간이유는 여러개 지정해서 앞에 것이 없으면 뒤쪽서체로 표현 */
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  /* 본문 기본 폰트 크기 지정 */
+  font-size: 30px;
+  /* 본문 자간 모두 -5% */
+  letter-spacing:-0.05em;
+  color: red;
+  /* 본문기본 컬러 지정 */
+  color: #101010;
+  /* 본문 줄간격이 모두 150%일 경우 */
+  line-height: 1.5;
+  /* font-weight는 px 등 단위를 사용X */
+  /* 노멀 */
+  /* font-weight: 400; */
+  /* 미디엄 */
+  /* font-weight: 500; */
+  /* 볼드 */
+  /* font-weight:700; */
+  /* 엑스트라 볼드 */
+  /* font-weight:900; */
+  /* 반응형, 모바일에서 영문이 많은 경우 사용 */
+  /* word-break: break-all; */
+}
+
+#wrap{
+  /* min-width: 1280px;  */
+  /* 스크롤바 강제생성 */
+  height: 1500px;
+}
+
+.main_section1{
+  background: #ddd;
+}
+.main_section1 .inner{
+  max-width: 1200px;
+  border: 1px solid red;
+  /* 블록을 가운데 정렬 */
+  margin: 0 auto;
+  height: 400px;
+}
+/* inner는빼도 되는데 교유한 .main_section1는 꼭 들어가야한다  */
+.main_section1 h2{
+  font-size: 50px;
+  color: pink;
+  font-style: italic;
+  /* 정렬 = align , 글자취급요소*/
+  text-align: center;
+  /* 큰 제목에 글자가 하나씩 넘어가면 보기 안좋으니 한 단어씩 넘어가게 설정 */
+  word-break: keep-all;
+  /* 단어가 부모의 가로보다 길 경우 한 글자씩 줄바꿈을 해준다 */
+  word-wrap: break-word;
+}
+
+/* 글자 취급요소(인라인요소) 사이는 자간으로 인해 4px 간격이 생김 */
+
+.main_section1 .link_wrap{
+  /* 가운데정렬 */
+  text-align: center;
+}
+.main_section1 .link_wrap a{
+  border: 1px solid red;
+  display: inline-block;
+  /* 메뉴구조에서 a의 높이를 잡아야 할 경우 px을 사용한다 */
+  line-height: 50px;
+  /* 좌우로 배치된 글자취급요소의 높이가 다를경우 요소끼리의 수직 정렬을 의미한다 */
+  /* 위아래 조금만 이동시 px가능 */
+  vertical-align: middle;
+  vertical-align: bottom;
+  vertical-align: top;  
+}
+.main_section1 .link_wrap a:nth-child(1){
+  height: 100px;
+}
+.main_section1 .link_wrap a:nth-child(2){
+  height: 70px;
+  
+}
+
+.main_section1 p{
+  /* 취소선 */
+  text-decoration: line-through;
+  /* 밑줄, 글자속성을 따라감*/
+  text-decoration: underline;
+  /* 밑줄빼기 */
+  text-decoration: none;
+  /* 자간 */
+  /* 자간은 고정크기 사용불가, 폰트크기에 따라 달라져야하므로 em(폰트크기의 상대단위)사용 */
+  /* 폰트크기의 -10%는 0.1em */
+  letter-spacing:-0.1em;
+  /* 폰트크기의 -5% 0.05em */
+  letter-spacing:-0.2em;
+  font-size: 30px;
+  /* 아래 다같은 의미이지만 2로 사용하는 편이다 */
+  /* line-height: 2em; */
+  /* line-height: 200%; */
+  /* 줄간격은 em생략이 가능하여 %이므로 소수 두자리 가능 */
+  /* line-height: 1.4; */
+  /* line-height: 60px; */
+  /* 영문을 스펠링 하나하나 줄바꿈 */
+  /* 한글을 한단어씩 바꿈 */
+  word-break: keep-all;
+}
+

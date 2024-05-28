@@ -1,0 +1,38 @@
+모바일 버전에서 
+footer 부분 글씨 한글자씩 떨어트리기
+묶어서 사용
+    word-break: keep-all;
+    word-wrap: break-word;
+
+
+포지션 풀기 position:static
+
+
+
+옆에 fixed btn설정
+-footer아래 해야함
+#footer .top_btn{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  background: #76ca9e url(../images/common/arrow_top.svg) no-repeat 50% 50%;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+
+js 에서 a 클릭시 홈화면 안나오게 하는 법 -e.preventDefault()
+ document
+    .querySelector('#footer .top_btn')
+    .addEventListener('click', function (e -- 꼭넣기) {
+      e.preventDefault(); -- 함수 추가
+	
+
+-----스크롤 부드럽게 이동--------
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });

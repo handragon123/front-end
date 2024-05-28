@@ -1,0 +1,119 @@
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #ff601f;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 'mim-width' 필요없음 */
+#wrap {
+  height: 1500px;
+}
+
+.main_etc{
+  background: #f0f0f0;
+  padding: 70px 0;
+}
+.main_etc .inner {
+  /* 반응형에선 창크기에 따라 줄어들어야 하므로 최대크기(max-width)로 설정 */
+  /* 여백만큼 더해서 내용크기가 1200이 되도록 설정 */
+  max-width: 1230px;
+  /* 테블릿 디자인 좌우여백을 미리 걸어 창이 줄어들때 붙지않게함 */
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* display: flex li들 좌우로 정렬 */
+.main_etc .etc{
+  display: flex;
+  /* gap: 상하좌우 */
+  /* flex-wrap:nowrap일 경우 gap을 주면 기존크기에서 줄어듬 */
+  /* flex-wrap이 wrap일 경우 가로길이 줄어들지않음 */
+  gap: 0 15px;
+}
+/* 넓이 25퍼센트로 지정하여 동일하게 띄어짐 */
+.main_etc .etc li{
+  background: #fff;
+  width: 25%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.main_etc .etc li:hover h3 {
+  color: var(--point-color1);
+}
+/* a블록값 설정 */
+.main_etc .etc a {
+  display: block;
+  height: 250px;
+  padding:40px 25px 0;
+  /* background: 색,url()이미지,반복옵션,위치x값y값,가로세로크기 */
+  /* background fixed가 있지만 ios에서 안되므로 사용금지 */
+  /* 백그라운드 사진 설정, 사진크기 조절 auto 55px, 사진위치 조정 right 25px, botom 25px */
+  background: url(../images/company.svg) no-repeat right 25px bottom 25px / auto 55px;
+}
+.main_etc .etc h3 {
+  color:var(--txt-color-600);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.main_etc .etc li:nth-child(2) a{
+  background-image: url(../images/mic.svg);
+}
+.main_etc .etc li:nth-child(3) a{
+  background-image: url(../images/chrysanthemum.svg);
+}
+.main_etc .etc li:nth-child(4) a{
+  background-image: url(../images/qna.svg);
+}
+
+/* 테블릿 분기점 */
+/* 미디어쿼리로 장치별 분기점을 설정 */
+/* 디자인 그리드가 1400이상일 경우 테블릿 분기점 1200그리드가 1280이하일 경우 테블릿 분기점 1024가 좋음 */
+/* 뷰포트(창크기)가 1024이하일때 적용 */
+@media (max-width:1024px) {
+  /* 말줄임처리 */
+  .main_etc .etc h3 {
+    /* 말줄임용 display */
+    display: -webkit-box;
+    /* 넘친내용 가려줌 */
+    overflow: hidden;
+    /* 말줄임 줄수 1이면 말줄임 1줄 2이면 2줄 */
+    -webkit-line-clamp: 1;
+    /* 텍스트 흐름을 세로방향으로 지정 */
+    -webkit-box-orient: vertical;
+  }
+  .main_etc .etc p br {
+    display: none;
+  }
+}
+
+
+/* 모바일분기점 */
+/* 모바일 화면은 320까지 최대한 맞추는것이 좋음 */
+@media (max-width:767px){
+  .main_etc {
+    padding: 35px 0;
+  }
+  .main_etc .etc{
+    flex-wrap: wrap;
+    gap: 15px 15px;
+  }
+  .main_etc .etc li{
+    /* flex-wrap으로 줄바꿈될 경우 간격만큼 줄어들지 않으므로 width에서 간격 / 컬럼갯수 만큼 빼야함 */
+    width: calc(50% - 15px / 2);
+  }
+  .main_etc .etc a {
+    height: 200px;
+    padding: 25px 15px 0;
+  }
+  .main_etc .etc h3 {
+    font-size: 18px;
+    /* 말줄임 제거 */
+    display : block;
+  }
+  .main_etc .etc p {
+    font-size: 14px;
+  }
+}
+

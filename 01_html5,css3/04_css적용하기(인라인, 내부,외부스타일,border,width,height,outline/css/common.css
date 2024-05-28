@@ -1,0 +1,27 @@
+#header p {
+  border: 3px dashed;
+  /* 색상은 16진수 컬러코드 사용  */
+  /* 두자리가 같을 경우 한자리로 사용가능 */
+  /* 투명색인 경우 rgba사용 */
+  border: 3px dotted #ff0000;
+  /* 0~255사이 숫자사용, 1=true, 0=false, 1=100%, %일경우 소수2자리 가능 */
+  /* 값의 순서 변경가능한 경우 있으나 절때 바꾸지 말것! */
+  border: 20px solid rgba(0,0,0,0.65);
+}
+#header .logo a{
+  /* 클릭요소에 tab키로 포커스가 이동하면 아웃라인이 생기며(키보드 접근성) 시각적으로 불편한경우 제거해야함 */
+  outline: none;
+}
+.section1 {
+  /* 레이아웃에서 크기들은 %로 넣어주는게 좋다, px도 사용한다 */
+  /* %는 부모의 크기가 기준이다 */
+  width: 50%;
+  height: 200px;
+  border: 4px solid;
+}
+
+.section1 h2{
+  border: 5px solid palegreen;
+}
+
+

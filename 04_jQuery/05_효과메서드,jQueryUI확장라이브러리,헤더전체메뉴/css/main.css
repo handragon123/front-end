@@ -1,0 +1,119 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #5dc591;
+  --point-color2: #907354;
+  --txt-color-400: #969696;
+  --txt-color-500: #565656;
+  --txt-color-600: #191919;
+}
+
+#wrap {
+  height: 1500px;
+}
+
+#header .inner {
+  max-width: 1280px;
+  height: 100px;
+  background: #ddd;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#header .test_btn {
+  height: 50px;
+  padding:0 20px;
+  font-size: 18px;
+  border:1px solid black;
+}
+#header .test_btn.on {
+  background: #000;
+  color:#fff;
+}
+
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li {
+  padding:0 30px;
+  position: relative;
+}
+#header .gnb>li>a {
+  display: block;
+  line-height: 100px;
+  font-size: 20px;
+}
+#header .gnb .depth2 {
+  position: absolute;
+  left:0;
+  top:100px;
+  width:100%;
+  text-align: center;
+  border:3px solid red;
+  padding:20px 0;
+  display: none;
+}
+#header .gnb .depth2 li + li {
+  margin-top:10px;
+}
+
+#header .lang_wrap {
+  position: relative;
+}
+#header .lang_wrap .lang_btn.on {
+  background: #000;
+  color:#fff;
+}
+#header .lang_wrap .lang {
+  display: none;
+  position:absolute;
+  left:0;
+  top:40px;
+}
+
+#container {
+  height: 1500px;
+}
+
+.main_etc {
+  padding:100px 0;
+}
+.main_etc .inner {
+  max-width:1200px;
+  height: 300px;
+  border:1px solid red;
+  margin:0 auto;
+  position: relative;
+}
+.main_etc .box {
+  border:2px solid black;
+  position: absolute;
+  left:0;
+  top:100px;
+}
+
+#footer .top_btn {
+  position: fixed;
+  right:50px;
+  bottom: 50px;
+  width:60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border:1px solid #000;
+}
+
+.circle {
+  position: fixed;
+  left:0;
+  top:0;
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  background: yellowgreen;
+  z-index: 10000;
+  transform: translate(-50%,-50%);
+}

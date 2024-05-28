@@ -1,0 +1,129 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #c30606;
+  --point-color2: #907354;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 min-width필요 없음 */
+#wrap {
+  height: 1500px;
+  min-width: 1260px;
+}
+
+#header {
+  background: rgba(52,52,54,1);
+  /* 포지션 엡솔,fixed를 걸면 내용만큼 크기가 줄어듬 */
+  /* fixed레이어는 창기준이므로 #wrap의 min-width안먹음; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 1260px;
+  width: 100%;
+  /* 다른 포지션요소보다 무조건 제일 위로 배치 */
+  z-index: 9999;
+}
+
+#container{
+  /* 헤더가 포지션이면 main-slider에서 마진병합이므로 무조건 패딩으로 밀어야함 */
+  padding: 100px;
+}
+
+#header .inner{
+  width: 1180px;
+  height: 100px;
+  border: 1px solid ye/llow;
+  margin: 0 auto;
+  display: flex;
+  /* 수직정렬 align  */
+  align-items:center ;
+}
+
+
+#header .gnb_wrap{
+  margin-left: 82px;
+}
+#header .gnb{
+  display: flex;
+  
+}
+#header .gnb>li{
+  /* 메뉴구조는 서브메뉴가 열리기 때문에 메뉴간 간격이 비어있으면 hover가 풀리기 때문에 margin이 아닌 padding 사용 */
+  padding: 0 15px;
+}
+/* 주메뉴 작업할땐 자식선택자 >사용 */
+#header .gnb>li>a {
+  color: #fff;
+  font-size: 19px;
+  font-family: 'Akrobat', sans-serif;
+  /* a의 높이를 잡기위해 먼저 block 사용  */
+  display: block;
+  /* 메뉴구조에서 높이를 맞출경우 줄간격 사용, line-height 는 수직정렬을 해준다 */
+  line-height: 100px;
+  letter-spacing: 0.12em;
+  position: relative;
+}
+
+/* 마우스를 갖다 댔을때 반응하는것 :hover */
+#header .gnb>li:hover>a::after{
+  display: block;
+}
+/* ::after,::before는 content 꼭써야함 */
+#header .gnb>li>a::after{
+  content:'';
+  height: 3px;
+  background: var(--point-color1);
+  /* 앱솔이면 블럭이 되며 크기는 내용만큼 줄어듬  */
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  display: none;
+}
+#header .login_menu{ 
+  /* 플렉스 컨테이너 끝으로 밀어줌 */
+  margin-left: auto;
+  display: flex;
+  gap:0 20px
+}
+/* 폰트관련 a에 몰아서 쓰기 */
+#header .login_menu a{
+  color: var(--txt-color-400);
+  /* 블럭을 걸어서 높이설정 */
+  display: block;
+  /* 글자하나를 수직정렬하면 line-height 사용 */
+  line-height: 30px;
+  font-size: 13px;
+}
+#header .login_menu li:last-child a{
+  background: #555;
+  color:#fff;
+  width: 88px;
+  text-align: center;
+}
+
+
+.main_slider {
+  /* 넘치는 부분을 숨겨주는 기능 */
+  overflow: hidden;
+  /* 포지션엡솔요소의 기준 */
+  position: relative;
+  /* 부모안의 요소가 포지션엡솔이면 부모의 높이가 없어지므로 잡아야함 */
+  height: 900px;
+}
+
+.main_slider .slide{
+  /* 창밖으로 나가려면 포지션이여야 함 */
+  position: absolute;
+  left: 50%;
+  top: 0;
+  /* 자신크기의 절반만큼 왼쪽으로 이동, 가운데로 정렬시켜줌 */
+  transform: translateX(-50%);
+}
+
+.main_slider img {
+  max-width: none;
+}

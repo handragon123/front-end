@@ -1,0 +1,195 @@
+:root {
+  --point-color1: #07f;
+  --point-color2: #2be283;
+  --txt-color-400: #9fa1a7;
+  --txt-color-500: #737881;
+  --txt-color-600: #17191d;
+}
+
+/* body는 높이가 없어도 배경색이 보임 */
+body {
+  background: #f8f9fa;
+}
+
+#wrap {
+  min-width: 1004px;
+}
+
+.main_game {
+  padding:68px 0 300px;
+}
+.main_game .inner {
+  max-width:1280px;
+  margin:0 auto;
+}
+.main_game .game_top {
+  display: flex;
+  align-items: center;
+}
+.main_game .game_top h2 {
+  font-size: 24px;
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  font-weight: 700;
+  color:var(--txt-color-600);
+  margin-right:15px;
+}
+.main_game .game_top .link_btn {
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  color:var(--txt-color-600);
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.main_game .game_top .link_btn:hover {
+  color:var(--point-color1);
+}
+.main_game .game_top .link_btn:hover .sns_icon {
+  background-position-x:-50px;
+}
+.main_game .game_top .link_btn::after {
+  content: '';
+  width:18px;
+  height: 18px;
+  background: url(../images/set_newpage.svg) no-repeat;
+  margin-left:5px;
+  margin-top:-2px;
+}
+.main_game .game_top .link_btn:hover::after {
+  background-position-x:-50px;
+}
+
+
+.main_game .game_top .search_wrap {
+  margin-left: auto;
+  width:302px;
+  position: relative;
+}
+.main_game .game_top input[type=search] {
+  height: 44px;
+  width:100%;
+  border:none;
+  border-bottom: 1px solid #ddd;
+  background: none;
+  padding:0;
+  color:var(--txt-color-600);
+}
+.main_game .game_top .search_btn {
+  width:44px;
+  height: 44px;
+  position: absolute;
+  right:0;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  background: none;
+}
+.main_game .game_top .search_btn::after {
+  content: '';
+  width:20px;
+  height: 20px;
+  background: #17191d url(../images/set_main.svg) no-repeat 0 -300px;
+}
+
+.main_game .filter {
+  background: #fff;
+  padding:20px 30px;
+  margin-top:20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:16px;
+}
+.main_game .filter a {
+  line-height: 21px;
+  padding:0 10px;
+}
+.main_game .filter a.active {
+  background: var(--txt-color-600);
+  color:#fff;
+  border-radius: 20px;
+}
+
+.main_game .game {
+  display: flex;
+  flex-wrap: wrap;
+  gap:60px 24px;
+  margin-top:40px;
+}
+.main_game .game>li {
+  width:calc(25% - 72px / 4);
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+.main_game .game .img_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.main_game .game .img_wrap img {
+  transition: all 0.3s;
+}
+.main_game .game .img_wrap::after {
+  content: '';
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+.main_game .game>li:hover {
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.16);
+}
+.main_game .game>li:hover .img_wrap img {
+  transform: scale(1.1);
+}
+.main_game .game>li:hover .img_wrap::after {
+  opacity: 0;
+}
+
+.main_game .game .txt_wrap {
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  background: #fff;
+  height: 120px;
+  gap:10px 0;
+}
+.main_game .game .txt_wrap strong {
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color:var(--txt-color-600);
+}
+
+.main_game .game .sns_btn {
+  position: absolute;
+  right:20px;
+  bottom:82px;
+}
+.main_game .game .sns_btn i {
+  /* 인라인블럭 하단에 간격나올경우 */
+  vertical-align: top;
+}
+
+.main_game .game .os_menu{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+
+
+
+
+@media(max-width:1400px){
+  .main_game .inner{
+    max-width: 954px;
+  }
+  .main_game .game>li{
+    width:calc(100% / 3 - 48px / 3);
+  }
+}

@@ -1,0 +1,26 @@
+.wrap {
+  padding: 30px;
+}
+
+.gnb {
+  display: flex;
+}
+.gnb > li + li {
+  padding-left: 30px;
+}
+.gnb > li > a {
+  display: block;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.container h2 {
+  font-size: 40px;
+}
+
+.react_query .list {
+  margin-top: 20px;
+}
+.react_query .list li {
+  margin-bottom: 10px;
+}

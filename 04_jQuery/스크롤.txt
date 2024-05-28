@@ -1,0 +1,8 @@
+// 요소가 뷰포트 상단까지 스크롤됐을때
+if(st >= $('요소').offset().top)
+
+// 요소가 아래에서 뷰포트안으로 올라올때
+if(st >= $('요소').offset().top - $(window).outerHeight())
+
+// 문서 가장 아래까지 스크롤했을때
+if(st >= $(document).outerHeight() - $(window).outerHeight())

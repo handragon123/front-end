@@ -1,0 +1,11 @@
+글자 가운데 정렬
+- 부모에서 text-align:center
+
+가로크기가 있는 블럭을 가운데
+-margin:0 auto;
+
+flex구조에서 가로 사운데
+-justify-content:center;
+
+포지션요소 가운데
+-position:absolute; left50% transform:translateX(-50%)

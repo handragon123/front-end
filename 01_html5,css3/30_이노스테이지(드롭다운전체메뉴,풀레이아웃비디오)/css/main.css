@@ -1,0 +1,398 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #5dc591;
+  --point-color2: #907354;
+  --txt-color-400: #969696;
+  --txt-color-500: #565656;
+  --txt-color-600: #191919;
+}
+
+/* 브라우저 기본 크기 16px을 10px로 변환
+16:10 = 100:x x=62.5% */
+html {
+  font-size: 62.5%;
+}
+
+#wrap {
+  height: 1500px;
+}
+
+#header {
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height: 80px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+}
+#header::before {
+  content: '';
+  position: absolute;
+  left:0;
+  top:80px;
+  width:100%;
+  height: 1px;
+  background:#ededed;
+  z-index: 10;
+  display: none;
+}
+#header::after {
+  content: '';
+  position: absolute;
+  left:0;
+  top:80px;
+  width:100%;
+  height: 0;
+  transition: all 0.3s;
+  background: #fcfcfc;
+}
+#header.on {
+  background: #fff;
+}
+#header.on::before  {
+  display: block;
+}
+#header.on::after {
+  height: 200px;
+}
+#header.on .logo a {
+  background-image: url(../images/img_logo_black.svg);
+}
+#header.on .gnb>li>a {
+  color:var(--txt-color-600);
+}
+#header.on .gnb .depth2 {
+  opacity: 1;
+  visibility: visible;
+}
+#header.on .login_btn {
+  background-image: url(../images/ico_login_black.svg);
+}
+
+#header.fixed {
+  background: #fff;
+}
+#header.fixed .logo a {
+  background-image: url(../images/img_logo_black.svg);
+}
+#header.fixed .gnb>li>a {
+  color:var(--txt-color-600);
+}
+#header.fixed .login_btn {
+  background-image: url(../images/ico_login_black.svg);
+}
+
+
+
+
+#header .logo {
+  width:119px;
+  position: absolute;
+  left:56px;
+  top:50%;
+  transform: translateY(-50%);
+}
+#header .logo a {
+  display: block;
+  height: 36px;
+  background: url(../images/img_logo_white.svg) no-repeat 0 0 / 100%;
+}
+
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li {
+  padding:0 40px;
+  position: relative;
+}
+#header .gnb>li>a {
+  display: block;
+  line-height: 80px;
+  font-size: 2rem;
+  font-family: 'Outfit',sans-serif;
+  position: relative;
+  color:#fff;
+}
+#header .gnb>li>a::after {
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: 0;
+  width:100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+#header .gnb>li:hover>a::after {
+  transform: scaleX(1);
+}
+
+#header .gnb .depth2 {
+  position: absolute;
+  left:40px;
+  top:80px;
+  z-index: 10;
+  padding-top:30px;
+  transition: all 0.3s;
+  opacity: 0;
+  /* 요소의 원래 영역이 마우스 반응하지않게함 */
+  visibility: hidden;
+}
+#header .gnb .depth2 li + li {
+  margin-top: 15px;
+}
+#header .gnb .depth2 a {
+  transition: all 0.2s;
+}
+#header .gnb .depth2 a:hover {
+  color:var(--point-color1);
+}
+
+#header .login_btn {
+  position: absolute;
+  right:56px;
+  top:50%;
+  transform: translateY(-50%);
+  width:34px;
+  height: 34px;
+  background: url(../images/ico_login_white.svg) no-repeat right center / 24px;
+}
+
+#header .open_btn {
+  display: none;
+}
+#header .m_gnb_area {
+  display: none;
+}
+
+
+
+.main_visual {
+  height: 100vh;
+  position: relative;
+}
+.main_visual video {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_visual .tit_wrap {
+  position: absolute;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+  width:100%;
+  text-align: center;
+  color:#fff;
+}
+.main_visual .tit_wrap h2 {
+  font-size: 6.4rem;
+  font-family: 'Outfit',sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.main_visual .tit_wrap p {
+  font-size: 3.2rem;
+}
+
+@keyframes fadeImg {
+  100% {
+    opacity: 0;
+  }
+}
+/* 키프레임은 0%에서 100%까지 진행후 0%(최초상태)로 돌아감
+100%에서 멈추게 할 경우 forwards옵션 사용 */
+.main_visual img {
+  animation: fadeImg 1s 4s forwards;
+}
+@keyframes fadeTxt {
+  100% {
+    opacity: 1;
+  }
+}
+.main_visual .txt_wrap {
+  animation:fadeTxt 1s 4s forwards;
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  opacity: 0;
+}
+
+
+
+
+
+/* 테블릿 분기점 */
+@media (max-width:1200px) {
+  #header {
+    height: 60px;
+  }
+  #header.on::before,
+  #header::after {
+    display: none;
+  }
+  #header .logo {
+    left:28px;
+    width:86px;
+  }
+  #header .logo a {
+    height: 26px;
+  }
+  #header .gnb_wrap {
+    display: none;
+  }
+  #header .login_btn {
+    right:72px;
+    background-size:20px;
+  }
+  #header.on .open_btn span {
+    background: var(--txt-color-600);
+  }
+  #header.fixed .open_btn span {
+    background: var(--txt-color-600);
+  }
+
+  #header .open_btn {
+    display: flex;
+    position: absolute;
+    right:28px;
+    top:50%;
+    transform: translateY(-50%);
+    width:34px;
+    height: 34px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px 0;
+    background: none;
+    border:none;
+  }
+  #header .open_btn span {
+    width:20px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.2s;
+  }
+  #header .open_btn.on span:nth-child(1) {
+    transform:rotateZ(135deg) translate(5px,-5px);
+  }
+  #header .open_btn.on span:nth-child(2) {
+    transform: scale(0);
+  }
+  #header .open_btn.on span:nth-child(3) {
+    transform:rotateZ(-135deg) translate(5px,5px);
+  }
+
+  #header .m_gnb_area {
+    display: block;
+    position: fixed;
+    left:0;
+    top:60px;
+    bottom: 0;
+    width:100%;
+    background: #fff;
+    padding:58px 0;
+    overflow: auto;
+    transform: translateX(100%);
+    transition: all 0.3s;
+  }
+  #header .m_gnb_area.on {
+    transform: translateX(0);
+  }
+
+  #header .m_gnb>li>a {
+    font-size: 3.1rem;
+    font-family: 'Outfit',sans-serif;
+    font-weight: 700;
+    color:var(--txt-color-600);
+    padding:0 28px;
+    display: block;
+    line-height: 46px;
+  }
+  #header .m_gnb>li + li {
+    margin-top:13px;
+  }
+
+  #header .m_gnb .depth2 {
+    margin-bottom: 30px;
+  }
+  #header .m_gnb .depth2 li {
+    margin-top:20px;
+  }
+  #header .m_gnb .depth2 a {
+    display: block;
+    padding:0 53px;
+    font-size: 2.1rem;
+  }
+
+
+  .main_visual {
+    height: 50vh;
+  }
+  .main_visual img {
+    width:calc(100vw * 410 / 768);
+  }
+  /* 폰트크기를 창크기에 따라 조정할 경우 vw사용 */
+  /* 창크기 768px: 요소크기 42px = 100vw: x, x=5.46vw */
+  /* 요소크기는 테블릿시안 768px일때의 크기를 의미함 */
+  /* vw공식: calc(100vw * 요소크기 / 768) */
+  /* vw와 px 같이 사용하지말것 */
+  .main_visual .tit_wrap h2 {
+    font-size: calc(100vw * 42 / 768);
+    margin-bottom:calc(100vw * 18 / 768);
+  }
+  .main_visual .tit_wrap p {
+    font-size: calc(100vw * 21 / 768);
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width:767px) {
+  #header .logo {
+    left:20px;
+  }
+  #header .login_btn {
+    right:62px;
+  }
+  #header .open_btn {
+    right:20px;
+  }
+
+  #header .m_gnb_area {
+    padding:37px 0;
+  }
+  #header .m_gnb>li>a {
+    padding:0 20px;
+    font-size: 2.3rem;
+    line-height: 34px;
+  }
+  #header .m_gnb .depth2 {
+    margin-bottom: 20px;
+  }
+  #header .m_gnb .depth2 li {
+    margin-top: 10px;
+  }
+  #header .m_gnb .depth2 a {
+    padding:0 34px;
+    font-size: 1.5rem;
+  }
+
+  .main_visual .tit_wrap h2 {
+    font-size: calc(100vw * 25 / 360);
+    margin-bottom: calc(100vw * 7 / 360);
+  }
+  .main_visual .tit_wrap p {
+    font-size: calc(100vw * 13 / 360);
+  }
+}

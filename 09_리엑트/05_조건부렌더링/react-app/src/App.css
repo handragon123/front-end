@@ -1,0 +1,7 @@
+.app {
+  padding: 20px;
+}
+
+.item.checked {
+  text-decoration: line-through;
+}

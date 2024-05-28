@@ -1,0 +1,65 @@
+/* 전체선택자를 통한 초기화 */
+* {
+  margin:0;
+  padding:0;
+}
+
+/* 아이디선택자: 100점 */
+#header {
+  border:3px solid red;
+}
+
+/* 클래스선택자: 10점 */
+/* 110점 */
+#header .logo {
+  border:2px solid green;
+}
+/* css적용순서는 점수가 동일하면 위에서 아래로 적용
+점수가 다를경우 높은점수가 우선순위를 가짐 */
+.logo {
+  border:5px solid black;
+}
+
+/* 태그선택자: 1점 */
+/* 101점 */
+/* 하위선택자 */
+#header p {
+  border:2px solid yellowgreen;
+}
+
+/* !important 10000점 */
+/* 인라인스타일을 변경할 경우만 사용 */
+#header .list {
+  border:5px dotted red !important;
+}
+
+/* 선택자앞에 태그 생략가능 */
+/* header#header ul.gnb {
+  border:2px solid blue;
+} */
+#header .gnb {
+  border:2px solid blue;
+}
+/* 이중리스트일 경우 자식선택자 이용 */
+#header .gnb>li {
+  border:2px solid;
+}
+#header .gnb>li>a {
+  font-size: 20px;
+  font-weight: 700;
+  color:#000;
+}
+#header .gnb .depth2 a {
+  color:green;
+}
+
+/* 공통스타일로 모든페이지에 적용 */
+/* 속성선택자, 인접형제선택자 */
+input[type=checkbox] + label {
+  color:red;
+}
+
+/* 동시에 여러요소 선택 */
+h1,h2,h3,h4,h5,h6 {
+  font-size: 30px;
+}

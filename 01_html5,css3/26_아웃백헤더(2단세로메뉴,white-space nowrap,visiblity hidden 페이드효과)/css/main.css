@@ -1,0 +1,153 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #c30606;
+  --point-color2: #907354;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+#wrap {
+  height: 1500px;
+  min-width:1260px;
+}
+
+#header {
+  background: rgba(52,52,54,1);
+  /* 포지션 엡솔, fixed걸면 내용만큼 크기가 줄어듬 */
+  /* fixed레이어는 창기준이므로 #wrap의 min-width안먹음 */
+  position: fixed;
+  left:0;
+  top:0;
+  min-width:1260px;
+  width:100%;
+  /* 다른 포지션요소보다 무조건 제일 위로 배치 */
+  z-index: 9999;
+}
+
+#header .inner {
+  width:1180px;
+  height: 100px;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#header .gnb_wrap {
+  margin-left:82px;
+}
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li {
+  /* 메뉴구조에서 서브메뉴가 열리는경우
+  빈간격이면 hover가 풀리기때문에 padding으로 간격처리 */
+  padding:0 15px;
+  position: relative;
+}
+#header .gnb>li>a {
+  color:#fff;
+  font-size: 19px;
+  font-family: 'Akrobat',sans-serif;
+  display: block;
+  /* 메뉴구조에서 높이를 맞출경우 줄간격 사용 */
+  line-height: 100px;
+  letter-spacing: 0.12em;
+  position: relative;
+}
+#header .gnb>li>a::after {
+  content:'';
+  height: 3px;
+  background: var(--point-color1);
+  /* 엡솔이면 블럭이되며 크기는 내용만큼 줄어듬 */
+  width:100%;
+  position: absolute;
+  left:0;
+  bottom: 30px;
+  display: none;
+}
+#header .gnb>li:hover>a::after {
+  display: block;
+}
+#header .gnb>li:hover .depth2 {
+  opacity: 1;
+  visibility: visible;
+  /* display: block; */
+}
+
+/* 서브메뉴와 주메뉴 사이는 붙어있어야함 */
+#header .depth2 {
+  position: absolute;
+  left:0;
+  top:100px;
+  background: rgba(0,0,0,0.6);
+  padding:28px 30px;
+  /* 투명도 0 - 1 */
+  /* 투명도 0이더라도 요소영역은 남아있음 */
+  opacity: 0;
+  /* 영역을 사라지게, 페이드효과 적용시 같이사용 */
+  visibility: hidden;
+  /* transition안먹음 */
+  /* display: none; */
+  /* css 애니메이션 */
+  transition: all 0.5s;
+}
+#header .depth2 li + li {
+  margin-top:18px;
+}
+#header .depth2 a {
+  color:#fff;
+  /* 글자 줄바꿈안하고 한줄로 나오게 */
+  white-space: nowrap;
+}
+
+
+
+
+
+#header .login_menu {
+  /* 플렉스컨테이너 끝으로 밀어줌 */
+  margin-left:auto;
+  display: flex;
+  gap:0 20px;
+}
+#header .login_menu a {
+  font-size: 13px;
+  color:var(--txt-color-400);
+  display: block;
+  line-height: 30px;
+}
+#header .login_menu li:last-child a {
+  background:#555;
+  color:#fff;
+  width:88px;
+  text-align: center;
+}
+
+
+
+
+#container {
+  /* 헤더가 포지션이면 main_slider에서 마진병합이므로
+  패딩으로 밀어야함 */
+  padding-top:100px;
+}
+
+.main_slider {
+  overflow: hidden;
+  /* 포지션엡솔요소의 기준 */
+  position: relative;
+  /* 부모안의 요소가 포지션엡솔이면 부모의 높이가 없어지므로 잡아야함 */
+  height:900px;
+}
+.main_slider .slide {
+  /* 창밖으로 나가려면 포지션이어야함 */
+  position: absolute;
+  left:50%;
+  top:0;
+  /* 자신크기의 절반만큼 왼쪽으로 이동 */
+  transform: translateX(-50%);
+}
+.main_slider img {
+  max-width:none;
+}

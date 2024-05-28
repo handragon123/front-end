@@ -1,0 +1,25 @@
+.movie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.movie_card {
+  width: calc(50% - 10px);
+}
+.movie_card .img_wrap {
+  padding-top: 150%;
+  position: relative;
+}
+.movie_card img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie_card .txt_wrap {
+  display: flex;
+  flex-direction: column;
+}

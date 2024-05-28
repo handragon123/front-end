@@ -1,0 +1,4 @@
+<!-- icon, 터치아이콘 파일 동일해야 모바일크롬에서 아이콘 제대로 나옴 -->
+  <link rel="icon" href="images/common/favicon.jpg">
+  <!-- iOS사파리용 터치아이콘 -->
+  <link rel="apple-touch-icon" href="images/common/favicon.jpg">

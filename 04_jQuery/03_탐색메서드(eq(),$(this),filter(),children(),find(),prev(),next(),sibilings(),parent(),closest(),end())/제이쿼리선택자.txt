@@ -1,0 +1,8 @@
+$(this)
+$(this).find('depth2')
+$(this).prev
+$(this).parent
+$(this).closet('#header')
+$('#header .gnb>li')
+$('#header .gnb>li').fliter('.gnb2')
+end()요소 사용시 이전 선택자로 돌려줌

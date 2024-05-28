@@ -1,0 +1,35 @@
+  //js 형제요소
+  function siblings(t) {
+    const children = t.parentElement.children;
+    const tempArr = [];
+
+    // html 컬렉션은 유사배열이므로 forEach사용불가
+    // 일반 for문으로 유사배열 길이만큼 반복하여 임시배열에 넣어줌
+    for (let i = 0; i < children.length; i++) {
+      tempArr.push(children[i]);
+    }
+
+    // 임시배열의 요소들과 함수실행시 전달된 요소가 다른 요소만 배열로 리턴
+    return tempArr.filter((v) => {
+      return v !== t;
+    });
+  }
+
+  // 모바일 아코디언메뉴
+  document.querySelectorAll('#header .m_gnb>li>a');
+  const mGnb = document.querySelectorAll('#header .m_gnb>li>a');
+  mGnb.forEach((v) => {
+    v.addEventListener('click', function () {
+      this.parentElement.classList.toggle('on');
+
+      siblings(this.parentElement).forEach((v) => {
+        v.classList.remove('on');
+      });
+    });
+  });
+});
+
+1. m_gnb>li>a 클릭시 li에 on걸어서 a와 .depth2 토글하기
+2. 여러요소 선택시 querySelectorAll로 배열선택
+3. 배열.forEach사용하여 각 배열요소에 click이벤트 연결
+4. 형제요소는 함수를 사용하여 선택후 forEach 로 현재요소의 클래스 제거

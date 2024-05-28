@@ -1,0 +1,59 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #eb6242;
+  --point-color2: #907354;
+  --txt-color-400: #8c959d;
+  --txt-color-500: #333;
+  --txt-color-600: #222;
+}
+
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 min-width필요 없음 */
+#wrap {
+  height: 1500px;
+  min-width: 1180px;
+}
+
+.main_slider {
+  /* 포지션엡솔 사용시 기준잡아줘야함 */
+  position: relative;
+  /* 이미지 높이 잡아주기 */
+  height: 810px;
+  /* 사진아래로 */
+  overflow: hidden;
+}
+.main_slider .slide {
+  /* 스크롤시 화면 들어가짐 */
+  position: absolute;
+  left:50%;
+  top:0;
+  /* 이미지 사진 가운데 배치 */
+  transform: translateX(-50%);
+}
+.main_slider img {
+  max-width: none;
+}
+.main_slider .btn_wrap {
+  border: 2px solid red;
+  position: absolute;
+  left: 50%;
+  bottom: 178px;
+  width: 1100px;
+  transform: translateX(-50%);
+  padding-left: 60px;
+}
+.main_slider .btn_wrap button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  /* 인라인 블럭사이 간격 4px */
+  margin-right: 6px;
+  background: url(../images/btn_slide_arrow.png) no-repeat;
+}
+
+.main_slider .btn_wrap button:hover {
+  background-position-y: -60px ;
+}
+.main_slider .btn_wrap .prev_btn{
+  transform:rotateZ(180deg);
+}

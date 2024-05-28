@@ -1,0 +1,74 @@
+/* 전체선택자를 통한 초기화 */
+* {
+  margin:0;
+  padding:0;
+}
+
+a {
+  color:#333;
+  /* 밑줄빼기 */
+  text-decoration: none;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 폼요소와 테이블은 브라우저가 서체를 변경하기 때문에 따로 선언 */
+/* 폼의 기본 설정을 변경 설정가능하다 */
+body, button, input, textarea, section, table {
+  /* font 축약형 사용시 보이지않는 기본값이 적용되므로 사용금지, 반드시 개별속성에 사용 */
+  /* 시스템폰트일때는 영문, 한글 모두입력해야함 */
+  /* font-family:'바탕','batang', serif; */
+  /* sans-serif는 고딕체를 의미하며 앞쪽 폰트가 없을 경우 시스템 기본 고딕체로 표현됨 */
+  /* font-family:'맑은 고딕','malgun gothic', sans-serif; */
+  /* 시스템에 있는 고딕체를 사용하려면 아래같이 작성 */
+  /* ,가 들어간이유는 여러개 지정해서 앞에 것이 없으면 뒤쪽서체로 표현 */
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  /* 본문 기본 폰트 크기 지정 */
+  font-size: 30px;
+  color: red;
+  /* 본문기본 컬러 지정 */
+  color: #101010;
+  /* font-weight는 px 등 단위를 사용X */
+  /* 노멀 */
+  /* font-weight: 400; */
+  /* 미디엄 */
+  /* font-weight: 500; */
+  /* 볼드 */
+  /* font-weight:700; */
+  /* 엑스트라 볼드 */
+  /* font-weight:900; */
+}
+
+#wrap{
+  min-width: 1280px; 
+  /* 스크롤바 강제생성 */
+  height: 1500px;
+}
+
+.main_section1{
+  background: #ddd;
+}
+.main_section1 .inner{
+  width: 1200px;
+  border: 1px solid red;
+  /* 블록을 가운데 정렬 */
+  margin: 0 auto;
+  height: 400px;
+}
+/* inner는빼도 되는데 교유한 .main_section1는 꼭 들어가야한다  */
+.main_section1 h2{
+  font-size: 50px;
+  color: pink;
+  font-style: italic;
+}

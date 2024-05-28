@@ -1,0 +1,51 @@
+.main_section1 .inner {
+  max-width:1200px;
+  height: 300px;
+  margin:0 auto;
+  border:1px solid red;
+}
+.main_section1 h2 {
+  font-size: 50px;
+  border:10px solid black;
+  width:300px;
+  padding:0 20px;
+  color:var(--point-color1);
+}
+.main_section1 .txt {
+  font-size: 30px;
+}
+.main_section1 .txt strong {
+  color:var(--point-color1);
+}
+/* 
+.main_section2 a{
+  border: 2px solid red;
+} */
+
+.main_etc h2{
+  width: 200px;
+  height: 100px;
+  font-size: 50px;
+  /* 레이어로 띄워서 제자리에 */
+  position: absolute;
+  /* 내용을 가려줌 */
+  overflow: hidden;
+  /* 선도 보안보이게 */
+  /* top right bottom  left 순서 0000이면 아예안보인다 */
+  clip: rect(0 0 0 0);
+  /* 크기만큼 이동하여 원래위치로 가게 */
+  margin: -1px;
+  /* width:0일경우 요소가 없는걸로 인식함 */
+  /* width: 1px; */
+  /* height: 1px; */
+  border: 10px solid red;
+}
+
+/* .main_etc input{
+  height: 50px;
+} */
+
+.main_section3 .open_btn{
+  height: 50px;
+  margin-left: 16px;
+}

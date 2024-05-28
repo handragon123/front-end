@@ -1,0 +1,34 @@
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #ff601f;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 'mim-width' 필요없음 */
+#wrap {
+  height: 1500px;
+}
+
+.main_txt .inner{
+  width: 1200px;
+  border: 4px solid red;
+  margin: 0 auto;
+  height: 200px;
+  /* 넘친 내용을 보여줌 */
+  overflow: visible;
+  /* 넘친 내용을 가려줌,크기가 정해져있어야함 */
+  overflow: hidden;
+  /* 넘친내용을 스크롤해줌 */
+  overflow: auto;
+  /* 가로,세로모두스크롤가능 */
+  overflow: scroll;
+  /* 가로,세로 스크롤바 따로 지정 */
+  /* overflow-x: hidden;
+  overflow-y:hidden; */
+}
+.main_txt .inner p {
+  font-size: 24px;
+}

@@ -1,0 +1,31 @@
+<div id = "wrap">
+	<header id ="hearder">
+		<h1>로고</h1>
+		<h2>제목</h2>
+		<nav class= "gnb_wrap">
+			<ul class="gnb">
+				<li></li>
+				<li></li>
+			</ul> ul에는 li만 사용한다.			
+		</nav>//주메뉴 감을때만 nav를 사용한다.
+	
+	</header>
+	<main id="container">
+		<section class="section1">
+			<h2>섹션제목</h2>
+			<p>문단문단문<br>단문단입니다.</p> // br은 줄바꿈을 실행한다. / strong, em, span 3개 사용하여 글꼴 변경가능하다.
+			<dl>
+				<dt>제목</dt>
+				<dd>설명</dd>
+			</dl>  // 위와 같은 꼴로 태그가 이루어진다.
+			<dl>
+				<dt>제목</dt>
+				<dd>설명</dd>
+			</dl>
+		</section>// 메인페이지에서 여러가지를 구분하기위해 섹션 사용한다.
+	</main>
+	<footer id = "footer">
+		<address></address>
+		<p class="address"> 주소외의 다른내용포함 </p>
+	</footer>
+</div>

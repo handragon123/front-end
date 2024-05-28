@@ -1,0 +1,108 @@
+#wrap {
+  min-width: 1280px;
+  height: 1500px;
+
+}
+
+/* margin을 사용하는 갯수
+-바깥여백을 이용하여 이동, 간격 
+- margin:위 오른쪽 아래 왼쪽
+- margin: 위 좌우 아래
+- margin: 위아래 좌우
+- margin: 모두(사용 자제)
+
+마진병합
+- 부모, 자식이 수직방향 인접시 부모, 자식의 margin-top 중 가장 큰값으로 병합하여 가장 바깥요소에 적용시킴
+*/
+
+/* padding
+- 요소의 안쪽여백, 안쪽내용을 밀어넣을때사용
+- 크기를 늘리며 간격줄때 사용
+- padding: 위 오른쪽 아래 왼쪽 */
+
+#wrap {
+  background: yellowgreen;
+}
+#header{
+  height: 150px;
+  background: #ddd;
+  width: 1200px;
+  margin-left: 100px;
+  margin-top: 200px;
+  /* 가로길이가 있는 블럭을 가운데 정렬시 사용 */
+  /* 마진병합이므로 사용불가 */
+  margin:100px auto 0;
+  margin: 0 auto 200px;
+  padding-top: 50px;
+
+}
+#header .logo {
+  border: 2px solid red;
+  /* margin-top: 30px; */
+}
+
+#container {
+  margin-top: 100px;
+}
+.main_etc {
+  /* 섹션구조에서 위아래에 패딩으로 여백잡기 */
+  padding: 100px 0;
+  background: gray;
+}
+.main_etc .inner {
+  width: 1200px;
+  height: 400px;
+  /* background: orange; */
+  margin:0 auto ;
+}
+
+.main_etc h2 {
+  font-size: 50px;
+  font-weight: 700;
+  border: 2px solid rebeccapurple;
+  text-align: center;
+  /* 마진병합 */
+  /* margin-top: 100px; */
+  margin-top: 100px;
+}
+
+/* 형제요소가 수직방향인접일때도 마진병합이므로 현제요소의 위아래 여백은 한방향으로만 주는것이 좋음 */
+
+.main_etc p {
+  font-size: 18px;
+  /* 마진병합아님, 부모와 수직방향인접이 아니므로 */
+  margin-top: 40px;
+}
+
+.main_etc .list {
+  margin-top: 80px;
+  display: flex;
+}
+
+.main_etc .list li {
+  border: 2px solid black;
+  /* %는 부모크기가 기준 */
+  width: 50%;
+  /* margin-left: 40px; */
+}
+/* 첫번째 li를 제외한 나머지 li 왼쪽에만 여백 */
+.main_etc .list li + li {
+  margin-left: 40px;
+}
+
+.main_etc .list2 {
+  display: flex;
+}
+
+.main_etc .list2 li {
+  /* calc함수 사용시단위 꼭 사용
+  연산자 앞뒤 꼭 띄어쓰기 */
+  width:calc(100% / 3);
+  border: 2px solid black;
+  /* 안쪽 여백으로 내용 밀어넣기 */
+  padding: 20px;
+}
+
+.main_etc .list2 li + li {
+  margin-left: 30px;
+}

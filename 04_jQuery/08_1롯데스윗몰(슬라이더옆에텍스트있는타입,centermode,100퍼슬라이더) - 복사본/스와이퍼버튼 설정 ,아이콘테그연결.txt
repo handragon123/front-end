@@ -1,0 +1,10 @@
+swiper에서 버튼설정
+버튼 position먹고있어서 먼저 
+  position: static; 로 풀어줘야함
+
+
+아이콘 테그 연결
+사이트 들어가서 아이콘 다운하고 압축풀고 
+eot.ttf.woff,woff2,css 파일들을 font파일에 넣는다
+그리고 html들어가서 head부분에 폰트css파일 연결
+  <link rel="stylesheet" href="fonts/remixicon.css">

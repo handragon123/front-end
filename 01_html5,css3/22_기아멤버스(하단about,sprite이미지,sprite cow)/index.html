@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- 반응형, 적응형 모바일 뷰포트세팅 -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- 적응형 데스크탑일 경우 뷰포트크기 = 기본그리드 + 80px -->
+  <meta name="viewport" content="width=1340">
+  <!-- iOS 사파리 전화번호형식 색상변경 방지 -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="기아 멤버스 프로그램인 기아멤버스 사이트 메인 페이지입니다.">
+  <title>메인 | 기아멤버스</title>
+  <!-- 구글웹폰트, link태그방식이 @import보다 빠름
+  웹폰트를 가장 먼저 연결해야함, preconnect로 브라우저에게 다운로드할 웹폰트를 미리 알려 다운로드를 좀더 빠르게함 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+</head>
+<body>
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <main id="container">
+      <section class="main_channel">
+        <div class="inner">
+          <div class="tit_wrap">
+            <h2>All about Kia</h2>
+            <p>Kia의 다양한 채널과 함께 하세요.</p>
+          </div>
+          <div class="channel">
+            <a href="#" class="channel1">
+              <span class="blind">mykia</span>
+            </a>
+            <a href="#" class="channel2" target="_blank" title="새창 열림">
+              <span class="blind">kia</span>
+            </a>
+            <a href="#" class="channel3" target="_blank" title="새창 열림">
+              <span class="blind">carpience</span>
+            </a>
+            <a href="#" class="channel4" target="_blank" title="새창 열림">
+              <span class="blind">카톡</span>
+            </a>
+            <a href="#" class="channel5" target="_blank" title="새창 열림">
+              <span class="blind">페이스북</span>
+            </a>
+            <a href="#" class="channel6" target="_blank" title="새창 열림">
+              <span class="blind">인스타그램</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #ff601f;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  min-width: 1280px;
+  height: 1500px;
+}
+
+#header {
+  border: 5px solid red;
+}
+#header h1 {
+  background: yellowgreen;
+  padding-top:30px;
+}
+#header p {
+  background: yellow;
+  width: 100px;
+  margin-top: 30px;
+}
+#header >a {
+  border: 2px solid red;
+  width:200px;
+  height:200px;
+  margin-top:30px;
+  /* 패딩탑은 위쪽으로 뚫고나가 커지므로 사용불가 */
+  padding-top:30px;
+  /* 글자를 블럭처리하여 패딩,박스크기 처리가능 */
+  /* display: block; */
+  /* display: inline-block; */
+} 
+#header img {
+  width: 200px;
+  margin-top: 50px;
+}
+#header input {
+  height: 100px;
+}
+
+#header .gnb>li>a {
+  font-size: 30px;
+}
+/* 특별한 효과없이 메뉴토글(마우스데면 뜨고 안데면 안뜨는효과 */
+#header .gnb>li:hover .depth2{
+  display: block;
+}
+#header .gnb .depth2{
+  /* 눈에보이지않게하는기능 */
+  display: none;
+}
+#header .gnb .depth2 a {
+  font-size: 24px;
+}

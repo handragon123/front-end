@@ -1,0 +1,13 @@
+    pagination
+
+      type: 'fraction',  스와이퍼 숫자로바꿔줌
+
+
+
+
+pagination 모양 변경기능
+renderFraction: function (currentClass, totalClass) {
+      return '<span class="' + currentClass + '"></span>' +
+              ' of ' +
+              '<span class="' + totalClass + '"></span>';
+  }

@@ -1,0 +1,80 @@
+/* 컬러 변수 */
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #05141f;
+  --point-color2: #ea0029;
+  --txt-color-400: #8c959d;
+  --txt-color-500: #666;
+  --txt-color-600: #05141f;
+}
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 min-width필요 없음 */
+#wrap {
+  height: 1500px;
+  min-width: 1340px;
+}
+
+.main_channel {
+  height: 370px;
+  background: url(../images/img_main_channer.jpg)
+  no-repeat center top / cover;
+  padding-top: 85px;
+}
+/* 반응형 max-width 데스크탑 width */
+.main_channel .inner {
+  width: 1260px;
+  margin: 0 auto;
+}
+.main_channel .tit_wrap h2{
+  color: #fff;
+  font-size: 38px;
+  font-weight: 500;
+  text-align: center;
+}
+.main_channel .tit_wrap p{
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.main_channel .channel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+.main_channel .channel a{
+  background: url(../images/icon_channer_sns.png) no-repeat;
+}
+.main_channel .channel a.channel1{
+  background-position: 0 -64px;
+  width:84px;
+  height: 28px;
+  
+}
+.main_channel .channel a.channel2{
+  background-position: -82px 0;
+  width:80px;
+  height: 20px;
+}
+.main_channel .channel a.channel3{
+  background-position: -254px 0;
+  width: 70px;
+  height: 64px;
+}
+.main_channel .channel a.channel4{
+  background-position: -334px 0;
+  width:54px;
+  height: 54px;
+}
+.main_channel .channel a.channel5{
+  background-position: -402px 0;
+  width:54px;
+  height: 54px;
+}
+.main_channel .channel a.channel6{
+  background-position: -466px 0;
+  width: 54px;
+  height: 54px;
+}

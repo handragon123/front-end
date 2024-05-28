@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 현재 파일형식이 유니코드임 -->
+  <meta charset="UTF-8">
+  <!-- 뷰포트는 브라우저의 화면 크기 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시멘틱 마크업</title>
+</head>
+<body>
+  <!-- 관련내용을 묶어서 위치나 크기등을 지정 -->
+  <div id="wrap">
+    <header id ="header">
+      <!-- 제목을 의미하는 경우 사용 6단계까지 사용가능 -->
+      <h1>로고</h1>
+      <h2>작은제목</h2>
+      <h3>소제목</h3>
+      <!-- 주메뉴에만 사용 nav -->
+      <nav class="gab_wrap">
+        <!-- 순서가 필요없는 리스트 -->
+        <ul class="gnb">
+          <li>회사소개</li>
+          <li>고객센터</li>
+          <li>이벤트</li>
+          <li>게시판</li>
+        </ul>
+      </nav>
+      <!-- 순서가 중요한 리스트 -->
+      <ol>
+        <li>페이스북 로그인</li>
+        <li>이벤트 참여링크 크릭</li>
+        <li>정보 입력</li>
+      </ol>
+      <!-- 정의목록 : 제목이 포함된 리스트 -->
+      <dl>
+        <dt>건설</dt>
+        <dd>건축 구조용</dd>
+        <dd>건축 내외장용</dd>
+      </dl>
+      <dl>
+        <dt>조선</dt>
+        <dd>조선용</dd>
+        <dd>해군함정 특수선용</dd>
+      </dl>
+      <!-- dl에 dt,dd 하나이상 가능 -->
+      <dl>
+        <dt>주소: </dt>
+        <dd>서울시 종로구</dd>
+        <dt>전화 번호: </dt>
+        <dd>010-1111-2222</dd>
+      </dl>
+
+    </header>
+    <main id="container">
+      <section class="section01">
+        <h2>섹션 제목</h2>
+        <!-- <br>은 문단안에서 줄바꿈 -->
+        <!-- <br>은 닫을필요가 없는 self closing -->
+        <!-- span은 인라인 요소를 그룹할때쓰지만 그러한 디자인이 없으므로 글자를 감을때 사용 -->
+        <p><strong>오뚜기</strong>는 항상 앞장서서 <em>창조</em>의 기쁨과<br>보람을 경험하고 앞선 <span>식품</span>을 우리 인류에게 선보입니다.
+        </p>
+      </section>
+      <!-- 퀵메뉴, 모바일 사이드메뉴 -->
+      <aside class="quick">
+        <ul>
+          <li>퀵메뉴1</li>
+          <li>퀵메뉴2</li>
+          <li>퀵메뉴3</li>
+        </ul>
+      </aside>
+    </main>
+    <footer id="footer">
+      <address>서울시 종로구</address>
+      <!-- b, i, u는 의미없이 여러 글자에 스타일 적용시 사용하지만 일반사이트에서는 잘 안쓰임 i태그는 아이콘포트에 주로 사용 -->
+      <p class="address"><b>서울시</b> 서초구 강남대로 535 프린스빌딩 15층 <i>대표</i> : INSOO CHO(인수조) 전화 : 02-797-5036 <u>사업자등록번호</u> : 101-84-04143</p>
+    </footer>
+  </div>
+
+</body>
+</html>

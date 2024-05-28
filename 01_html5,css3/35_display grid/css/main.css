@@ -1,0 +1,77 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #b08d56;
+  --point-color2: #009223;
+  --txt-color-400: #919191;
+  --txt-color-500: #666;
+  --txt-color-600: #333;
+}
+
+#wrap {
+  /* height: 5500px; */
+}
+
+.main_sns {
+  padding: 0 15px;
+}
+.main_sns .inner{
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  /* height: 800px; */
+  padding: 87px 10px 60px;
+}
+.main_sns .tit_wrap h2 {
+  width: 178px;
+  margin: 0 auto;
+}
+.main_sns .tit_wrap p {
+  font-size: 14px;
+  text-align: center;
+  margin: 40px 0 30px;
+  color: #242831;
+}
+.main_sns .sns_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_sns .sns_wrap em {
+  font-size: 12px;
+  color: #242831;
+}
+.main_sns .sns_wrap em::after{
+  content: '';
+  display: inline-block;
+  width: 56px;
+  height: 1px;
+  background: #242831;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.main_sns .sns_wrap .sns_link {
+  padding-top: 4px;
+}
+.main_sns .sns_wrap .sns_link a a{
+  margin-right: 14px;
+}
+.main_sns .sns_wrap .sns_link img {
+  height: 18px;
+}
+
+.main_sns .sns {
+  display: grid;
+  /* 칸 갯수지정하면 행은 자동으로 만들어짐 */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 5px;
+}
+.main_sns .sns img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_sns .sns li:nth-child(1) {
+  /* grid-column: 1/ 4; */
+  grid-column: span 3;
+  grid-row: span 3;
+}

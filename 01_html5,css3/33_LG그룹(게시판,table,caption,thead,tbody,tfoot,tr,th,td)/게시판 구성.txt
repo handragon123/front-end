@@ -1,0 +1,5 @@
+게시파 구성
+- 게시물리스트 board_list
+- 게시물쓰기 board_write
+- 게시물보기 board_view
+- 게시물수정 board_modify

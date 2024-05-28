@@ -1,0 +1,2 @@
+<!-- inputmode="numeric" iOS 숫자키패드 추가속성 -->
+<input type="number" inputmode="numeric">

@@ -1,0 +1,88 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #eb6242;
+  --point-color2: #907354;
+  --txt-color-400: #8c959d;
+  --txt-color-500: #333;
+  --txt-color-600: #222;
+}
+
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 min-width필요 없음 */
+#wrap {
+  height: 1500px;
+  min-width: 1208px;
+}
+
+.main_recommand {
+  height: 610px;
+  background: url(../images/mainBanner01.jpg) no-repeat center top / cover;
+  padding-top: 61px;
+}
+
+.main_recommand .inner {
+  width: 1128px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.main_recommand .tit_wrap h2 {
+  color:#fff;
+  font-size: 40px;
+  text-align: center;
+}
+
+.main_recommand .tit_wrap p {
+  color:#fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.main_recommand .recommand {
+  margin-top:30px;
+  display: flex;
+  justify-content: center;
+  gap: 0 40px
+}
+
+.main_recommand .recommand li {
+  width: 300px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  /* 안쪽 a는 네모향태이므로 모서리를 가려준다 */
+  overflow: hidden;
+}
+.main_recommand .recommand a {
+  display: block;
+  background: #fff url(../images/icon-top0102.png) no-repeat right bottom;
+  height: 310px;
+  padding: 30px 25px;
+  border-radius: 5px;
+}
+.main_recommand .recommand li:last-child a{
+  background-image: url(../images/icon_searchResult.png);
+  background-color: #efefef;
+}
+
+.main_recommand .recommand h3::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 16px;
+  height: 3px;
+  background: #f26e50;
+}
+
+.main_recommand .recommand h3{
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+.main_recommand .recommand p{
+  font-size: 27px;
+  line-height: 1.2;
+}
+.main_recommand .recommand p strong{
+  color: var(--point-color1);
+}

@@ -1,0 +1,119 @@
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #ff601f;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  min-width: 1280px;
+  height: 1500px;
+
+}
+
+.main_slider {
+  height: 560px;
+  background: url(../images/visual_01.jpg) no-repeat 50% 50%;
+}
+
+.main_intro {
+  width: 1200px;
+  /* 레이아웃 전체가 위로 조금 올라가서 겹친경우 음수마진사용, 위쪽 요소를 가리므로 조심해야함 */
+  margin: -53px auto 0;
+  background: #ddd;
+  text-align: center;
+  padding: 37px 0;
+}
+
+.main_intro p {
+  font-size: 24px;
+  color:var(--txt-color-600);
+}
+
+.main_intro p strong {
+  color:var(--point-color1) ;
+  font-weight: 700;
+}
+
+.main_business {
+  padding-top:15px;
+}
+
+.main_business .business_tab{
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+}
+
+.main_business .business_tab li {
+  width: calc(100% / 3);
+}
+
+.main_business .business_tab a {
+  /* border: 2px solid black; */
+  /* a는 인라인이므로 크기가 이상하게 나옴 */
+  display: block;
+  /* 가로는 밖에서 높이는 안에서 */
+  height: 178px;
+  background: #f7f7f7;
+  /* padding 위 오른쪽 아래 왼쪽 */
+  padding: 43px 15px 0 130px;
+  /* 포지션 엡솔요소의 기준 */
+  position: relative;
+}
+/* before, after 가상요소 선택지는 인라인이라 글자만 먹힘 */
+.main_business .business_tab a::before{
+  /* before, after 함수 필수속성 content; */
+  content: '';
+  /* display: block; */
+  /* 포지션 엡솔이면 블럭이됨 , 위에 display block 생략가능*/
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  /* 아이콘 크기들이 다를경우 가장 큰 크기로 지정 */
+  width: 45px;
+  height: 43px;
+  background: url(../images/ico-home-type.png) no-repeat 0 4px;
+}
+/* sprite cow 사이트에 접속하여 이미지값 구하여 설정 */
+.main_business .business_tab li:nth-child(2) a::before{
+  background-position: 0 -39px;
+}
+.main_business .business_tab li:nth-child(3) a::before{
+  background-position: 0 -85px;
+}
+
+.main_business .business_tab li.active a{
+  background: url(../images/bg-home-type.png) no-repeat;
+}
+.main_business .business_tab li.active a::before{
+  background-position-x :-55px ;
+}
+
+.main_business .business_tab li.active {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0,0.2);
+  /* box-shadow:x,y 블러크기 offset 색 */
+}
+.main_business .business_tab li.active h3 {
+  color: #fff;
+  text-shadow: 1px 1px rgba(0,0,0, 1);
+}
+.main_business .business_tab li.active p {
+  color: #fff;
+  text-shadow: 1px 1px rgba(0,0,0, 1);
+}
+
+
+.main_business .business_tab li + li {
+  margin-left: 6px;
+}
+
+.main_business .business_tab h3{
+  font-size: 24px;
+  color: var(--txt-color-600);
+}
+.main_business .business_tab p {
+  margin-top: 10px;
+}

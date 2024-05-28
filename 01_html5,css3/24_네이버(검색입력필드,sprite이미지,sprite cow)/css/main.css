@@ -1,0 +1,66 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #03c75a;
+  --point-color2: #ed1c24;
+  --txt-color-400: #606060;
+  --txt-color-500: #404040;
+  --txt-color-600: #101010;
+}
+
+#wrap {
+  height:1500px;
+  /* min-width:1340px; */
+}
+
+#header .inner {
+  max-width:1280px;
+  height: 267px;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0 20px;
+}
+
+#header .search_area {
+  max-width:706px;
+  /* flex아이템은 내용만큼 줄어드므로 width지정해야함 */
+  width:100%;
+  height:58px;
+  border:1px solid var(--point-color1);
+  /* 높이/2면 반원 */
+  /* 높이가 커질수있는 경우 좀더 큰값을 입력해도됨 */
+  border-radius: 29px;
+}
+#header .search_area .search_inner {
+  display: flex;
+}
+#header .search_area .logo {
+  /* 부모가로길이가 줄어들경우 같이 작아지므로 안줄어들게함 */
+  flex-shrink: 0;
+}
+#header .search_area .logo a {
+  display: block;
+  padding: 16px 16px 16px 27px;
+}
+#header .search_area input[type=search] {
+  /* flex컨테이너의 남은 영역만큼 늘어남 */
+  /* flex:0 1 auto; */
+  /* 폼요소이므로 기본크기이하로 줄어들지않음 */
+  /* flex-grow:1; */
+  width:100%;
+  /* 폼요소 안쪽은 수직정렬이므로 height사용 */
+  height: 56px;
+  font-size: 21px;
+  font-weight: 700;
+  color:#000;
+  padding:0 20px 0 0;
+  border:none;
+}
+#header .search_area .search_btn {
+  width:62px;
+  height: 56px;
+  background: url(../images/svgexport-2.svg) no-repeat 12px center / 24px;
+  border:none;
+  flex-shrink: 0;
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=1280">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SUBWAY 써브웨이">
+  <meta content="신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이" property="og:description">
+  <!-- og 이미지는 절대주소로 연결해야함 -->
+  <meta property="og:image" content="http://hanyong8254.dothome.co.kr/test/images/common/og_image.jpg"/>
+  <meta property="og:url" content="http://hanyong8254.dothome.co.kr/test" />
+  <title>SUBWAY 써브웨이</title>
+  <link rel="icon" href="images/common/favicon.svg">
+  <link rel="apple-touch-icon" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/ui-common.js?v=<?php echo time(); ?>"></script>
+</head>
+
+<body>
+  <!-- 키보드 접근성 관련(tab키 사용자를 위해서) -->
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <header id="header">
+      <div class="inner">
+        <div class="header_top">
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo_w.png" alt="써브웨이">
+            </a>
+          </h1>
+          <ul class="login">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#" class="eng"><span class="blind">Eng</span></a></li>
+          </ul>
+        </div>
+        <nav class="gnb_wrap">
+          <ul class="gnb">
+            <li><a href="#">메뉴소개</a>
+              <ul class="depth2">
+                <li><a href="#">샌드위치</a></li>
+                <li><a href="#">랩ㆍ기타</a></li>
+                <li><a href="#">샐러드</a></li>
+                <li><a href="#">아침메뉴</a></li>
+                <li><a href="#">스마일 썹</a></li>
+                <li><a href="#">단체메뉴</a></li>
+              </ul>
+            </li>
+            <li><a href="#">이용방법</a>
+              <ul class="depth2">
+                <li><a href="#">써브웨이 이용방법</a></li>
+                <li><a href="#">단체메뉴 이용방법</a></li>
+                <li><a href="#">신선한 재료 소개</a></li>
+                <li><a href="#">App 이용방법</a></li>
+              </ul>
+            </li>
+            <li><a href="#">새소식</a>
+              <ul class="depth2">
+                <li><a href="#">이벤트ㆍ프로모션</a></li>
+                <li><a href="#">뉴스ㆍ공지사항</a></li>
+                <li><a href="#">광고영상</a></li>
+              </ul>
+            </li>
+            <li><a href="#">써브웨이</a>
+              <ul class="depth2">
+                <li><a href="#">써브웨이 역사</a></li>
+                <li><a href="#">써브웨이 약속</a></li>
+                <li><a href="#">샌드위치 아티스트 지원</a></li>
+                <li><a href="#">매장찾기</a></li>
+              </ul>
+            </li>
+            <li><a href="#">가맹점</a>
+              <ul class="depth2">
+                <li><a href="#">써브웨이 프랜차이즈</a></li>
+                <li><a href="#">가맹관련 FAQ</a></li>
+                <li><a href="#">가맹신청ㆍ문의</a></li>
+                <li><a href="#">자사안내</a></li>
+                <li><a href="#">사업설명회</a></li>
+              </ul>
+            </li>
+            <li><a href="#">온라인 주문</a>
+              <ul class="depth2">
+                <li><a href="#">FAST-SUB</a></li>
+                <li><a href="#">HOME-SUB</a></li>
+                <li><a href="#">단체주문</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="container">
+      <section class="main_slider">
+        <h2 class="blind">메인 배너</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-banner.jpg" alt="메인 배너">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-banner2.jpg" alt="메인 배너">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-banner3.jpg" alt="메인 배너">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev arrow_btn"></div>
+          <div class="swiper-button-next arrow_btn"></div>
+          <button type="button" class="toggle_btn">
+            <span class="blind">일시정지</span>
+          </button>
+        </div>
+      </section>
+      <section class="main_menu">
+        <div class="inner">
+          <h2 class="main_tit">Subway's Menu</h2>
+          <!-- 탭메뉴 클릭 시 탭내용으로 포커스 이동해야하므로 a -->
+          <ul class="menu_tab">
+            <li class="active"><a href="#">클래식</a></li>
+            <li><a href="#">프레쉬&amp;라이트</a></li>
+            <li><a href="#">프리미엄</a></li>
+            <li><a href="#">아침메뉴</a></li>
+          </ul>
+        </div>
+        <div class="swiper_area">
+          <div class="swiper_wrap active">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>에그마요11</strong>
+                      <p>부드러운 달걀과 고소한 마요네즈가 만나<br>더 부드러운 스테디셀러</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티11</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티11</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티11</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티11</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티111</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-prev arrow_btn"></div>
+              <div class="swiper-button-next arrow_btn"></div>
+            </div>
+          </div>
+          <div class="swiper_wrap">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>에그마요22</strong>
+                      <p>부드러운 달걀과 고소한 마요네즈가 만나<br>더 부드러운 스테디셀러</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티22</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티22</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티22</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티22</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티22</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-prev arrow_btn"></div>
+              <div class="swiper-button-next arrow_btn"></div>
+            </div>
+          </div>
+          <div class="swiper_wrap">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>에그마요33</strong>
+                      <p>부드러운 달걀과 고소한 마요네즈가 만나<br>더 부드러운 스테디셀러</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티33</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티33</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티33</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티33</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티111</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-prev arrow_btn"></div>
+              <div class="swiper-button-next arrow_btn"></div>
+            </div>
+          </div>
+          <div class="swiper_wrap">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>에그마요44</strong>
+                      <p>부드러운 달걀과 고소한 마요네즈가 만나<br>더 부드러운 스테디셀러</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티44</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티44</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티44</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티44</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/sandwich_cl06_01.jpg" alt="샌드위치">
+                    </div>
+                    <div class="txt_wrap">
+                      <strong>이탈리안 비엠티444</strong>
+                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화! 전세계가 사랑하는 써브웨이의 베스트셀러! Biggest Meatiest Tastiest, its’ B.M.T!</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-prev arrow_btn"></div>
+              <div class="swiper-button-next arrow_btn"></div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

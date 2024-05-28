@@ -1,0 +1,205 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ed6d00;
+  --point-color2: #009223;
+  --txt-color-400: #9a9a9a;
+  --txt-color-500: #8d8d8d;
+  --txt-color-600: #000;
+}
+
+
+#wrap {
+  height: 2500px;
+}
+
+
+.main_live {
+  padding: 100px 0;
+}
+.main_live .inner{
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main_tit {
+  font-size: 36px;
+  font-family: 'Montserrat' ,sans-serif;
+  font-weight: 500;
+  color : var(--txt-color-600);
+}
+
+.main_live .swiper {
+  margin-top: 50px;
+  padding-bottom: 115px;
+}
+
+.main_live .img_wrap {
+  /* 16:9 영역 만들기 창 줄일때 가변처리해서 같이 줄어듬
+  부모가로 기준으로 높이를 16:9로 설정 */
+  padding-top: 56.25% ;
+  position: relative;
+  /* 16:9 쉽게 만들기 aspect-ratio */
+  /* aspect-ratio: 16 / 9; */
+  border: 4px solid red;
+  overflow: hidden;
+}
+.main_live .img_wrap:hover img{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+/* 이미지 겹치게하여 안보이게 해줌 - position  */
+.main_live .img_wrap img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%; 
+  /* 사진 찌그러짐 방지 */
+  object-fit: cover;
+}
+
+.main_live .img_wrap a::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  left: 0;
+  top: 0;
+  background: #dd3175 url(../images/ico_instagram.png) no-repeat 50% 50% / 20px;
+  z-index: 10;
+}
+
+.main_live .txt_wrap{
+  padding-top: 30px;
+}
+.main_live .txt_wrap .date p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.main_live .swiper .swiper-pagination span {
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #000;
+  opacity: 0.2;
+}
+.main_live .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.main_more_btn {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 22px;
+  height: 22px;
+}
+.main_more_btn::before{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+}
+.main_more_btn::after{
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  margin-left: -1px;
+}
+
+
+@media (max-width:1200px) {
+  .main_live {
+    padding: 50px 0;
+  }
+  .main_tit {
+    font-size: 28px;
+  }
+  .main_live .swiper{
+    margin-top: 40px;
+  }
+
+  .main_live .txt_wrap{
+    padding-top: 15px;
+  }
+  .main_live .txt_wrap p {
+    margin-top: 5px;
+  }
+
+  .main_more_btn {
+    top: 5px;
+  }
+  .main_more_btn::before{
+    height: 1px;
+    margin-top: 0;
+  }
+  .main_more_btn::after{
+    height: 1px;
+  }
+}
+
+
+@media (max-width:767px) {
+  .main_live {
+    padding: 40px 0;
+  }
+  .main_live .inner{
+    padding: 0;
+  }
+
+  .main_tit {
+    padding-left: 20px;
+    font-size: 22px;
+  }
+  .main_live .swiper {
+    margin-top: 25px;
+    padding:0 20px 70px;
+  }
+  .main_live .swiper .swiper-slide {
+    width: calc(100% - 50px);
+  }
+  .main_live .img_wrap a::before{
+    width: 40px;
+    height: 40px;
+    background-size: 17px;
+  }
+  .main_live .txt_wrap .date{
+    font-size: 12px;
+  }
+  .main_live .txt_wrap p {
+    font-size: 15px;
+  }
+
+  .main_live .swiper .swiper-pagination span {
+    width: 7px;
+    height: 7px;
+    margin: 0 5px;
+  }
+
+  .main_more_btn {
+    width: 15px;
+    height: 15px;
+  }
+  .main_more_btn::before {
+    margin-top: -1px;
+  }
+
+} 

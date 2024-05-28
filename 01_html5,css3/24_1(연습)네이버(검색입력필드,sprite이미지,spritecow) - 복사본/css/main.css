@@ -1,0 +1,63 @@
+/* 컬러 변수 */
+:root {
+  /* --point-color1: #e91e63; */
+  --point-color1: #03c75a;
+  --point-color2: #ed1c24;
+  --txt-color-400: #606060;
+  --txt-color-500: #404040;
+  --txt-color-600: #101010;
+}
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 min-width필요 없음 */
+#wrap {
+  height: 1500px;
+  /* width: 1340; */
+}
+
+#header .inner {
+  max-width: 1280px;
+  /* width: 1280px; */
+  height: 267px;
+  border: 1px solid red;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#header .search_area{
+  max-width: 706px;
+  width: 100%;
+  height: 58px;
+  border: 1px solid var(--point-color1);
+  border-radius: 29px;
+}
+#header .search_area .search_inner{
+  display: flex;
+}
+#header .search_area .logo {
+  /* flex shrink:flex 사용시 부모가로길이가 줄어들경우 같이 작아지는데 shrink사용시 안줄어들게함 */
+  border: 1px solid rebeccapurple;
+  /* flex-shrink: 0; */
+}
+#header .search_area .logo a {
+  display: block;
+  padding: 16px 16px 16px 27px;
+}
+#header .search_area input[type=search]{
+  height: 56px;
+  width: 100%;
+  font-size: 21px;
+  color: #000;
+  padding: 0 20px 0 0;
+  border: none;
+}
+#header .search_area .search_btn{
+  width: 62px;
+  height: 56px;
+  background: #03c75a;
+  background: url(../images/svgexport-2.svg) no-repeat 12px center / 24px;
+  border:none;
+  flex-shrink: 0;
+}

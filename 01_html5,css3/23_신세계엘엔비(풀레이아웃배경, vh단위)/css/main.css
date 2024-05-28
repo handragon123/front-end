@@ -1,0 +1,77 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #502e82;
+  --point-color2: #ed1c24;
+  --txt-color-400: #8C959D;
+  --txt-color-500: #808080;
+  --txt-color-600: #333;
+}
+
+#wrap {
+  height:1500px;
+}
+
+.main_slider {
+  /* height %가 되려면 바깥요소에 높이가 있어야함 */
+  /* height: 100%; */
+  /* vw, vh는 창크기가 기준 */
+  /* viewport(브라우져화면) height */
+  height: 100vh;
+}
+.main_slider .slide {
+  /* 부모높이가 있으므로 %가능 */
+  height: 100%;
+  background: url(../images/202303152224573G78B6.png) no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_slider .slide .txt_wrap {
+  color:#fff;
+  text-align: center;
+}
+.main_slider .slide .txt1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.main_slider .slide .txt2 {
+  font-size: 40px;
+  font-weight: 500;
+  margin:30px 0;
+}
+.main_slider .slide .txt3 {
+  font-size: 20px;
+}
+
+
+
+
+/* 테블릿분기점 */
+@media (max-width:1120px) {
+  .main_slider .slide {
+    padding:0 20px;
+  }
+}
+
+
+
+
+/* 모바일분기점 */
+@media (max-width:767px) {
+  .main_slider {
+    height: 650px;
+  }
+  .main_slider .slide .txt_wrap br {
+    display: none;
+  }
+  .main_slider .slide .txt1 {
+    font-size: 18px;
+  }
+  .main_slider .slide .txt2{
+    font-size: 24px;
+    margin:20px 0;
+  }
+  .main_slider .slide .txt3 {
+    font-size: 14px;
+  }
+}

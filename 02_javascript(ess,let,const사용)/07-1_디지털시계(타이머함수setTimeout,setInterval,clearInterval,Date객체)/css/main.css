@@ -1,0 +1,30 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #5dc591;
+  --point-color2: #907354;
+  --txt-color-400: #969696;
+  --txt-color-500: #565656;
+  --txt-color-600: #191919;
+}
+
+#wrap {
+  height: 1500px;
+}
+
+.section1 {
+  width: 1280px;
+  padding:0 40px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.section1 .clock {
+  border: 1px solid red;
+  display: flex;
+  font-size: 80px;
+}
+
+.section1 .clock span {
+  margin:6px 10px 0;
+}

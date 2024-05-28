@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- 적응형 데스크탑일 경우 뷰포트크기 = 기본그리드 + 80px -->
+  <meta name="viewport" content="width=1280">
+  <title>margin.padding</title>
+  <!-- 공통css먼저 연결해야함 -->
+
+  
+  <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+</head>
+<body>
+  <!-- 키보드접근성메뉴  -->
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <header id = "header">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="gs">
+        </a>
+      </h1>
+     
+    </header>
+    <main id="container">
+      <section class="main_etc">
+        <div class="inner">
+          <h2>기타 섹션</h2>
+          <p>문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다문단입니다</p>
+          <ul class="list">
+            <li>
+              <a href="#">
+                <!-- a는 인라인이지만 블럭포함 모든요소 넣을수있음 -->
+                <h3>소제목</h3>
+                <p>소제목에 대한 설명</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>소제목</h3>
+                <p>소제목에 대한 설명</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="list2">
+            <li>
+              <a href="#">
+                <!-- a는 인라인이지만 블럭포함 모든요소 넣을수있음 -->
+                <h3>소제목</h3>
+                <p>소제목에 대한 설명</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>소제목</h3>
+                <p>소제목에 대한 설명</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>소제목</h3>
+                <p>소제목에 대한 설명</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

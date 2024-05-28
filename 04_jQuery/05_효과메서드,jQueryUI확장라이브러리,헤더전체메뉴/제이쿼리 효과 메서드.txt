@@ -1,0 +1,10 @@
+제이쿼리 효과 메서드
+- addClass(), removeClass(), toggleClass(), hasClass()
+- show(), hide(), toggle()
+- display:flex일 경우 제이쿼리 hide()로 안보이게 해놔야함
+- sideDown(), slideUp(), slideToggle()
+- 방향이 아니며 요소기준이 아래일경우 위로 늘어남
+- toggle관련은 click이벤트에서만 사용
+- fadeln(), fadeOut(), fadeToggle()
+- stop(): 이전효과를 멈춤 (stop().slideDown())
+- animate({left: 300},600,'easelnOutElastic',function() {}}

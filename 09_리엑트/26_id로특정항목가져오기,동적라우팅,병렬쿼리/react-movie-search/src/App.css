@@ -1,0 +1,44 @@
+.app {
+  padding: 20px 20px 80px;
+}
+
+.movie {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.img_wrap {
+  padding-bottom: 160%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.img_wrap img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: cover;
+  width: 110%;
+  height: 110%;
+}
+
+.txt_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.pagination button {
+  padding: 10px;
+  margin: 0 5px;
+}
+.pagination .num_btn.active {
+  color: red;
+}

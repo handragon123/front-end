@@ -1,0 +1,18 @@
+aos 설정
+aos - 이미지 애니메이션 효과 라이버리로
+aos사이트 들어가서 aos다운받고 js, css 연결해준다
+html에서 js, css 입력해주고
+html에서 aos효과 를 class 옆에 연결하여 사용해주면 됨
+
+ex) 나머지 설정은 js들어가서 설정해주면댐
+<div class="about_wrap about_wrap1" 
+data-aos="fade-down" data-aos-delay="600">
+
+-js
+$(function () {
+  AOS.init({
+    duration: 800,
+    // 스크롤시 한번만 애니메이션
+    once: true,
+  });
+});

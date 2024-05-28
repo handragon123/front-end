@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=1280"> -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="파리바게뜨 공식 홈페이지입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PARIS BAGUETTE">
+  <meta property="og:description" content="파리바게뜨 공식 홈페이지입니다.">
+  <!-- og 이미지는 절대주소로 연결해야함 -->
+  <meta property="og:image" content="https://cdn.paris.spl.li/wp-content/uploads/2020/01/logo.jpg">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="246">
+  <meta property="og:url" content="http://hanyong8254.dothome.co.kr/rwdParis" />
+  <title>파리바게뜨</title>
+  <link rel="icon" href="https://cdn.paris.spl.li/wp-content/uploads/2019/09/cropped-PB_favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" href="https://cdn.paris.spl.li/wp-content/uploads/2019/09/cropped-PB_favicon-192x192.png"
+    sizes="192x192">
+  <link rel="apple-touch-icon"
+    href="https://cdn.paris.spl.li/wp-content/uploads/2019/09/cropped-PB_favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/remixicon.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/ui-common.js?v=<?php echo time(); ?>"></script>
+</head>
+
+<body>
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <header id="header">
+      <div class="inner">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="파리바게트">
+          </a>
+        </h1>
+        <ul class="gnb gnb_left">
+          <li><a href="#" class="yellow">파바의 약속</a></li>
+          <li><a href="#">파바 메거진</a></li>
+          <li><a href="#">파바 스토리</a></li>
+          <li>
+            <a href="#">상품 안내</a>
+            <div class="info_main">
+              <ul class="info">
+                <li><a href="#">전체</a></li>
+                <li><a href="#">브레드</a></li>
+                <li><a href="#">케이크</a></li>
+                <li><a href="#">샌드위치</a></li>
+              </ul>
+              <ul class="sub">
+                <li><a href="#">선물</a></li>
+                <li><a href="#">디저트/스낵</a></li>
+                <li><a href="#">커피/음료</a></li>
+                <li><a href="#">간편식</a></li>
+              </ul>               
+              <a href="#" class="info_img">
+                <img src="images/deliciousproductcategoryimg.jpeg" alt="안내">
+              </a>
+            </div>
+          </li>
+        </ul>
+        <div class="gnb_right">
+          <ul class="gnb">
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">매장 정보</a></li>
+            <li><a href="#">주문 정보</a></li>
+            <li><a href="#">프로모션</a></li>
+          </ul>
+          <a href="#" class="search_btn">
+            <i class="ri-search-line"></i>
+          </a>
+        </div>
+        <div class="m_btn">
+          <button type="button" class="circle_btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="blind">사이트맵 열기</span>
+         </button>
+        </div>
+      </div>
+      <aside class="m_gnb_area">
+        <div class="scroll_header">
+          <a class="m_close_btn" href="#"><span class="blind">닫기</span></a>
+        </div>
+        <div class="scroll_body">
+          <div class="m_scroll_up">
+            <ul class="up_gnb">
+              <li><a href="#">파바의 약속</a></li>
+              <li><a href="#">파바 매거진</a></li>
+              <li><a href="#">파바스토리</a></li>
+              <li>
+                <a href="#" class="menu_info">상품 안내</a>
+                <ul class="m_info">
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">브레드</a></li>
+                  <li><a href="#">케이크</a></li>
+                  <li><a href="#">샌드위치</a></li>                 
+                  <li><a href="#">선물</a></li>
+                  <li><a href="#">디저트/스낵</a></li>
+                  <li><a href="#">커피/음료</a></li>
+                  <li><a href="#">간편식</a></li>
+                </ul>               
+              </li>
+            </ul>
+          </div>
+          <div class="m_scroll_down">
+            <ul class="down_gnb">
+              <li><a href="#">갤러리</a></li>
+              <li><a href="#">매장 정보</a></li>
+              <li><a href="#">주문 정보</a></li>
+              <li><a href="#">프로모션</a></li>
+            </ul>
+          </div>
+          <div class="m_follow">
+            <h2>Follow Us</h2>
+            <div class="m_sns">
+              <a href="#">
+                <img src="images/sns_ico_01.svg" alt="페이스북">
+              </a>
+              <a href="#">
+                <img src="images/sns_ico_02.svg" alt="인스타">
+              </a>
+              <a href="#">
+                <img src="images/sns_ico_03.svg" alt="유튜브">
+              </a>
+            </div>
+          </div>
+        </div>      
+      </aside> 
+      <div class="search_modal">
+        <div class="search_area">
+          <input type="text" placeholder="   Search" class="search_txt">
+          <a class="search_close" href="#">
+          <span class="blind">닫기</span>
+          </a>
+        </div>
+        
+      </div>
+    </header>
+    <main id="container">
+      <section class="main_new_slider">
+        <h2 class="blind">메인베너</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-1.jpg" alt="신상품">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-2.jpg" alt="신상품">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-3.jpg" alt="신상품">
+              </a>
+            </div> 
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-4.jpg" alt="신상품">
+              </a>
+            </div> 
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-5.jpg" alt="신상품">
+              </a>
+            </div> 
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-6.jpg" alt="신상품">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-7.jpg" alt="신상품">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/main-8.jpg" alt="신상품">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>        
+        </div>
+      </section>
+      <section class="promotion_slide">
+        <div class="inner">
+          <div class="tit_wrap">
+            <a class="tit_left" href="#">PROMOTION</a>
+            <a class="tit_right" href="#">SHOW MORE</a>
+          </div>
+          <div class="swiper_wrap"></div>
+          <div class="swiper">
+            <div class="swiper-wrapper">             
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-1.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+               <h3 class="post_title">
+                <a href="#">💕마음과 마음이 만나는 Heart Place💕 핱플, 파바✨</a>
+               </h3>
+               <span class="read">
+                <a href="#">READ MORE</a>
+               </span>
+              </div>
+             </div>
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-2.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+                <h3 class="post_title">
+                  <a href="#">💙파리생제르맹 리유저블 데일리백/빅백 출시!⚽</a>
+                 </h3>
+                 <span class="read">
+                  <a href="#">READ MORE</a>
+                 </span>
+              </div>
+             </div>
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-3.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+                <h3 class="post_title">
+                  <a href="#">🐉힘찬 청룡의 기운받고💙 힘내세용!🎉</a>
+                 </h3>
+                 <span class="read">
+                  <a href="#">READ MORE</a>
+                 </span>
+              </div>
+             </div>
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-4.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+                <h3 class="post_title">
+                  <a href="#">🎊카페 아다지오-시그니처☕ 스페셜 체험가 1,500원✨</a>
+                 </h3>
+                 <span class="read">
+                  <a href="#">READ MORE</a>
+                 </span>
+              </div>
+             </div>
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-5.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+                <h3 class="post_title">
+                  <a href="#">💙Let’s Go Together! 2024 승리의 기운!⚽ 2024년 다 함께✨</a>
+                 </h3>
+                 <span class="read">
+                  <a href="#">READ MORE</a>
+                 </span>
+              </div>
+             </div>
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-6.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+                <h3 class="post_title">
+                  <a href="#">💕Magical Holiday💕한정 굿즈! 파워퍼프걸 키링세트✨</a>
+                 </h3>
+                 <span class="read">
+                  <a href="#">READ MORE</a>
+                 </span>
+              </div>
+             </div>
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-7.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+                <h3 class="post_title">
+                  <a href="#">💙PARIS BAGUETTE X PARIS SAINT-GERMAIN⚽ 공식 파트너십 체결</a>
+                 </h3>
+                 <span class="read">
+                  <a href="#">READ MORE</a>
+                 </span>
+              </div>
+             </div>
+             <div class="swiper-slide">
+              <div class="img_wrap">
+               <a href="#">
+                 <img src="images/promotion-8.jpg" alt="프로모션">
+                 <span class="badge">진행 중</span>
+               </a>
+              </div>
+              <div class="txt_wrap">
+                <h3 class="post_title">
+                  <a href="#">💙Let’s Go Together!⚽ 이벤트 참여하고, 파리로 떠나자!🛫</a>
+                 </h3>
+                 <span class="read">
+                  <a href="#">READ MORE</a>
+                 </span>
+              </div>
+             </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section> 
+      <section class="products_slide">
+        <div class="inner">
+          <div class="tit_wrap">
+            <a class="tit_left" href="#">PRODUCTS</a>
+            <a class="tit_right" href="#">SHOW MORE</a>
+          </div>
+          <div class="swiper_wrap">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product0.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      2024 힘내세용 케이크</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product16.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      치키 피치티</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product1.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      겉바속쫀 초코 까눌레</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product2.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      생딸기 와르르 초코 케이크</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product3.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      L.O.V.E 케이크</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product4.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      러브베어 하트 케이크</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product5.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      생딸기 샌드위치</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product6.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      초코가 내 마음에 찰떡</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product7.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      파리생제르맹 곰 플레이어</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product8.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      반덴벌크 씨쉘 초콜릿</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product9.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      통통하트 젤로미</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product10.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      초코초코 롤리초코</strong>
+                  </a>                 
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="images/product11.png" alt="">
+                    </div>
+                    <strong class="txt">
+                      티라미수 딸기 초코 스퀘어샌드</strong>
+                  </a>                 
+                </div>
+              </div>
+              <div class="swiper-button-prev arrow_btn"></div>
+              <div class="swiper-button-next arrow_btn"></div>
+            </div>
+          </div>          
+        </div>
+      </section>
+      <section class="ps_story">
+        <div class="inner">
+          <div class="txt_wrap">
+            <div class="tit_wrap">
+              <a class="tit_left" href="#">PB STORY</a>
+              <a class="tit_right" href="#">SHOW MORE</a>
+            </div>
+          </div>
+          <div class="video_wrap">
+            <ul class="pb_video">
+              <li>
+                <div class="video_img">
+                    <a href="#">
+                      <img src="images/video_1.jpg"
+                    </a>
+                </div>
+                <div class="txt_wrap">
+                    <a href="#">
+                      <strong>광고</strong>
+                      <h3>VIP석에서 파리 생제르맹 경기 직관 어떤데?!?</h3>
+                      <p>파리 생제르맹 VIP 혜택이 궁금하시다구요?! 유튜버 ‘파리지앙 2세’와 함께 보여드릴게요 ? 대기 없는 입장과 호화로운 핑거 푸드 가득한 라운지, 기념품까지 챙겨주는 VIP 티켓 그래서 어떻게 받냐구요??!?</p>
+                    </a>
+                    <span class="date">
+                      2023-12-28
+                    </span>
+                </div>                  
+              </li>
+              <li>
+                <div class="video_img">
+                    <a href="#">
+                      <img src="images/video_2.jpg"
+                    </a>
+                </div>
+                <div class="txt_wrap">
+                    <a href="#">
+                      <strong>광고</strong>
+                      <h3> Magical Holiday | 놓치면 큰일나는 크리스마스 케이크 구매 혜택 ?</h3>
+                      <p>Magical Holiday ? 이번 크리스마스, 케이크의 달콤한 마법이 파리바게뜨에서 펼쳐집니다! 윤서가 정성스레 만든 초대장을 받은 당신? 케이크에 불을 붙여 함께 이 겨울을 밝혀주세요❣</p>
+                    </a>
+                    <span class="date">
+                      2023-12-28
+                    </span>
+                </div>                  
+              </li>
+              <li>
+                <div class="video_img">
+                    <a href="#">
+                      <img src="images/viedo_3.jpg"
+                    </a>
+                </div>
+                <div class="txt_wrap">
+                    <a href="#">
+                      <strong>광고</strong>
+                      <h3>아니 파바 아니고 진짜 파리 가는거 맞다니까? ?⚽</h3>
+                      <p>⚽ 파리바게뜨 X 파리 생제르맹 파리 현지 응원 이벤트 ⚽ 파바에 갔을 뿐인데 파리 생제르맹 경기 직관하는 성덕이 된다고??!? 자세한 내용은 파리바게뜨 홈페이지와 파바앱에서 확인해 주세요?</p>
+                    </a>
+                    <span class="date">
+                      2023-12-28
+                    </span>
+                </div>                  
+              </li>
+              <li>
+                <div class="video_img">
+                    <a href="#">
+                      <img src="images/video_4.jpg"
+                    </a>
+                </div>
+                <div class="txt_wrap">
+                    <a href="#">
+                      <strong>광고</strong>
+                      <h3>출발합니다 ✈파리 생제르맹 스타디움 랜선 투어</h3>
+                      <p>너무나도 궁금했던 파리 생제르맹 Parc des Princes 스타디움! 공식 파트너사인 파바가 먼저 다녀왔습니다? 파바와 함께 랜선으로 파리로 떠나보아요?</p>
+                    </a>
+                    <span class="date">
+                      2023-12-28
+                    </span>
+                </div>                  
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="pb_maga">
+        <div class="inner">
+          <div class="txt_wrap">
+            <div class="tit_wrap">
+              <a class="tit_left" href="#">PB MAGAZINE</a>
+              <a class="tit_right" href="#">SHOW MORE</a>
+            </div>
+          </div>
+          <div class="maga_wrap">
+            <ul>
+              <li>
+                <div class="maga">
+                  <a href="#">
+                    <img src="images/maga-2jpg.jpg" alt="">
+                  </a>                 
+                </div>
+                <div class="txt_wrap">
+                  <a href="#">
+                    <h3>2024년 신년 제품</h3>
+                    <p>lets go together 승리의 기운 2024함께!</p>
+                  </a>
+                </div>           
+              </li>
+              <li>
+                <div class="maga">
+                  <a href="#">
+                    <img src="images/maga-3.jpg" alt="">
+                  </a>                 
+                </div>
+                <div class="txt_wrap">
+                  <a href="#">
+                    <h3>2024년 신년 제품</h3>
+                    <p>lets go together 승리의 기운 2024함께!</p>
+                  </a>
+                </div>           
+              </li>
+              <li>
+                <div class="maga">
+                  <a href="#">
+                    <img src="images/maga-1.png" alt="">
+                  </a>                 
+                </div>
+                <div class="txt_wrap">
+                  <a href="#">
+                    <h3>2024년 신년 제품</h3>
+                    <p>lets go together 승리의 기운 2024함께!</p>
+                  </a>
+                </div>           
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="pb_insta">
+        <div class="inner">
+          <div class="tit_wrap">
+            <h3>@parisbagutte_kr</h3>
+            <span>Instagram</span>
+          </div>
+          <ul class="insta_wrap">
+            <li>
+              <a href="#">
+                <img src="images/insta1.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>✨파리생제르맹 리유저블 백 인증 이벤트✨
+                    당신만의 특별한
+                    파리생제르맹 리유저블 백(빅백/데일리백 2종 중 택1)🛍을
+                    지금, 인증해주세요😍
+                    파리생제르맹 굿즈부터 교환권까지
+                    상품들이 와르르~ 쏟아집니다🎁
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta2.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>달콤한 사랑에, 마음이 사르르💘
+                    여러분들의 사랑이 담긴 선물을 전달해보아요~😍
+                    #티라미수초코스퀘어샌드
+                    커피향 가득한 티라미수 쿠키 안에 달콤한 밀크 초콜릿과
+                    생크림 같이 부드러운 마스카포네 치즈를 넣은 랑그드샤 쿠키🍪
+                  </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta3.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>마음과 마음이 만나는 Heart Place, 파바에서
+                    발렌타인데이 선물을 준비해 보세요❤
+                    마음을 사르르 녹이는 핫초코밤 선물과
+                    다양한 케이크, 쿠키, 디저트가 준비되어 있답니다!
+                    사랑과 열정의 하트 & 진하고 달콤한 초코가 전하는
+                    사랑의 메시지로 연인의 💕마음이 사르르💕
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta4.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>🧸곰 좋아하는 사람?
+                    🎂케이크 좋아하는 사람?
+                    파바에서 곰과 케이크를 한번에 만나볼 수 있어요😎
+                    동물성 생크림 본연의 순수(秀)하고 부드러운 맛을 자랑하는
+                    #러브베어순수우유케이크
+                    바닐라빈 콕콕 커스타드 크림과 촉촉한 시트가
+                    조화로운 우유 생크림 케이크
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta5.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>💙Happy Birthday💙
+                    2월 파리 생제르맹 선수들의 생일을 축하합니다🎉
+                    파바와 함께 파리 생제르맹 선수들의 생일을 축하해주세요!
+                    추첨을 통해 파리 생제르맹만의 특별한 굿즈를 드려요!⚽
+                    여러분들의 축하가 선수들에게 큰 힘이 됩니다!!🔥
+                   </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta6.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>이보다 행복한
+                    설 선물은 없어요!💕
+                    변함없이 완벽한 승리를 쟁취한
+                    파리 생제르맹에게 힘찬 환호를👏
+                    ✨공식 파트너 파리바게뜨가 앞으로도 변함없이 응원합니다✨
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta7.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>🍰케이크🍰는 못 참지!
+                    발렌타인데이에 사랑하는 마음을 전하기 좋은
+                    케이크 라인업을 준비했어요❣
+                    #러브베어순수우유케이크
+                    동물성 생크림 본연의 순수하고 부드러운 맛🤍
+                    바닐라빈 콕콕 커스타드 크림과 촉촉한 시트가
+                    조화로운 우유 생크림 케이크
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta8.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>설 연휴에도 멈추지 않는다!🙌
+                    파리 생제르맹이 써내려 갈
+                    또 한편의 승리 드라마💙
+                    온마음을 다해 함께 응원해요🤗
+                    📅경기 일정
+                    2월 11일(일) 오전 5시 (한국 시간 기준)
+                    공식 파트너 파리바게뜨와
+                    이번 경기도 함께 응원해요⚽
+                   </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta9.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>파리 생제르맹(@psg )의 힘찬 기운을 함께 담은
+                    파리바게뜨만의 설 선물 세트를 준비했어요🤗
+                    바닐라 마들렌과 얼그레이 마들렌으로 구성된
+                   #마들렌드파리
+                    레몬 말차 피낭시에와 오렌지 얼그레이 피낭시에로 구성된
+                    #피낭시에드파리
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta10.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>
+                    설날에 마음을 전하고 싶은 분이 있으신가요?!
+                    그렇다면 주목해주세요😎
+                    감사한 마음을 전하고 싶은 분께는 #새해에도감사세트
+                    두 가지 만주와 우리 쌀로 만든 바삭한 모나카,
+                    네 개의 양갱으로 구성된 새해 맞이 전통 선물세트✨
+                    행운을 가득 드리고 싶은 분께는 #새해에도행운세트
+                    버터 풍미 가득한 정통 파운드와 립파이,
+                    오렌지 얼그레이 피낭시에로 구성한
+                    설 시즌 한정 구움 디저트 선물세트✨
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta11.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>이보다 행복한
+                    설 선물은 없어요!💕
+                    변함없이 완벽한 승리를 쟁취한
+                    파리 생제르맹에게 힘찬 환호를👏
+                    ✨공식 파트너 파리바게뜨가 앞으로도 변함없이 응원합니다✨
+                    </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/insta12.jpg" alt="">
+                <img src="images/svgexport-6.svg" alt="" class="icon">  
+                <div class="img_cover">
+                  <p>명절 설 맞이
+                    파리 생제르맹 선수들의
+                    청룡처럼 힘찬 인사가 도착했습니다💙
+                    2024년은 파바와 파리 생제르맹(@psg)과 함께
+                    힘찬 청룡의 기운 받고 힘내세용!
+                    LET’S GO TOGETHER!😎
+                   </p>
+                  <span>1 day ago</span> 
+                  <i class="ri-instagram-line"></i> 
+                </div>
+              </a>              
+            </li>
+          </ul>
+          <button class="btn">show more</button>
+        </div>
+      </section>
+      <section class="pb_section">
+        <div class="inner">
+          <a href="#">
+            <h3>고객 센터</h3>
+            <p>고객의 소리를 적극 경청하고 고객만족 향상 활동을 지속적으로 실천합니다.</p>
+            <span class="arrow"></span>
+            <div class="line">
+              <span></span>
+            </div>
+          </a>
+          <a href="#">
+            <h3>고객 센터</h3>
+            <p>고객의 소리를 적극 경청하고 고객만족 향상 활동을 지속적으로 실천합니다.</p>
+            <span class="arrow"></span>
+            <div class="line">
+              <span></span>
+            </div>
+          </a>
+          <a href="#">
+            <h3>고객 센터</h3>
+            <p>고객의 소리를 적극 경청하고 고객만족 향상 활동을 지속적으로 실천합니다.</p>
+            <span class="arrow"></span>
+            <div class="line">
+              <span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="footer_top">
+          <div class="info">
+            <h3>Info</h3>
+            <ul>
+              <li><a href="#">브랜드소개</a></li>
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">창업안내</a></li>
+              <li><a href="#">B2B주문 및 문의</a></li>
+              <li><a href="#">안전보건경영방침</a></li>
+              <li><a href="#">거래희망사전등록</a></li>
+              <li><a href="#">윤리신고센터</a></li>
+              <li><a href="#">채용</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">080-731-2027</a></li>
+              <li><span>평일 09:00 ~ 17:00</span><span>(점심 12:00~13:00)</span></li>
+              <li><a href="#">고객칭찬</a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <h2><a href="#"><img src="images/footer-logo.png" alt=""></a></h2>
+            <div class="logo_wrap">
+              <a href="#"><img src="images/footer2.png" alt=""></a>
+              <a href="#"><img src="images/footer3.png" alt=""></a>
+              <a href="#"><img src="images/footer4.png" alt=""></a>
+              <a href="#"><img src="images/footer5.png" alt=""></a>
+              <a href="#"><img src="images/footer6.png" alt=""></a>
+            </div>
+          </div>
+          <div class="sns">
+            <h3>Follow Us</h3>
+            <div class="sns_wrap">
+              <a href="#"><img src="images/sns_ico_01.svg" alt=""></a>
+              <a href="#"><img src="images/sns_ico_02.svg" alt=""></a>
+              <a href="#"><img src="images/sns_ico_03.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <ul class="bottom">
+          <li><a href="#">
+            이용악관
+          </a></li>
+          <li class="red"><a href="#">
+            개인청보처리방침
+          </a></li>
+          <li><a href="#">
+            이메일무단수집거부
+          </a></li>
+          <li><a href="#">
+            영상정보처리기기운영관리방침
+          </a></li>
+        </ul>
+      </div>
+      <div class="footer_bottom">
+        <p>All Rights Reserved © PARIS BAGUETTE, PARIS CROISSANT CO., LTD. 경기도 성남시 중원구 사기막골로 31번길 18 (주)파리크리상</p>
+      </div>
+      <div class="aside_menu">
+        <ul class="menu_wrap">
+          <li>
+            <a href="#" class="top">
+              <img src="images/svgexport-9.svg">
+              <p>top</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/svgexport-16.svg">
+              <p>매장정보</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/svgexport-17.svg">
+              <p>주문정보</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/aside4.png">
+              <p>파바의 약속</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/svgexport-18.svg">
+              <p>창업안내</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/svgexport-19.svg">
+              <p>파바앱</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #bb0841;
+  --point-color2: #2be283;
+  --txt-color-400: #777;
+  --txt-color-500: #555;
+  --txt-color-600: #000;
+}
+
+#header.sub_header {
+  height: 120px;
+}
+
+#container.sub_container {
+  padding-top: 120px;
+}
+
+.sub_visual {
+  height: 265px;
+  background: url(../images/visual_investment_ir_cr.jpg) no-repeat 50% 0 / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_visual .tit_wrap h2 {
+  font-size: 4.6rem;
+  font-weight: 500;
+  color:#fff;
+}
+
+.sub_tab_wrap {
+  margin-bottom: 60px;
+}
+.sub_tab {
+  max-width:1200px;
+  display: flex;
+  margin:0 auto;
+  border-right: 1px solid #ddd;
+}
+/* 메뉴갯수가 다르므로 flex-shrinK:1을 이용하여 자동으로 축소되게 */
+.sub_tab li {
+  width:100%;
+  border:1px solid #ddd;
+  border-right:none;
+}
+.sub_tab a {
+  display: block;
+  line-height: 60px;
+  text-align: center;
+}
+.sub_tab li.active {
+  border-color:var(--point-color1);
+}
+.sub_tab li.active a {
+  background: var(--point-color1);
+  color:#fff;
+}
+
+.content{
+  padding-bottom: 100px;
+}
+.content .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* IR정보 페이지 */
+.annual .tit {
+  font-size: 2.6rem;
+  color:var(--txt-color-600);
+  margin-bottom: 18px;
+  display: block;
+}
+
+/* 나머지 칸 길이는 자동으로 잡힘 */
+.annual .board_list_wrap .col1 {
+  width: 100px;
+}
+.annual .board_list_wrap .col3 {
+  width: 160px;
+} 
+.annual .board_list_wrap .download_btn{
+  padding: 7px 3px;
+  /* 인라인블럭하단 간격없애기 */
+  display: inline-flex;
+}
+.annual .board_list_wrap .download_btn:hover{
+  border-bottom: 1px solid black;
+}
+
+/* lg way 페이지 */
+.lg_way .sub_visual {
+  background-image: url(../images/visual_introLgWay_public_cr.jpg);
+}
+
+
+
+
+@media (max-width:1200px) {
+  #header.sub_header {
+    height: 100px;
+  }
+
+  #container.sub_container{
+    padding-top: 100px;
+  }
+
+  .sub_tab a{
+    line-height: 43px;
+    font-size: 1.5rem;
+  }
+  .annual .tit{
+    font-size: 2rem;
+    padding:0 15px;
+    margin-bottom: 15px;
+  }
+  .annual .board_list_wrap .col3 {
+    width: 20%;
+  }
+  .annual .board_list_wrap .td_left{
+    padding: 0 15px;
+  }
+
+  .board_list_wrap tr th:first-child,
+  .board_list_wrap tr td:first-child{
+    display: none;
+  }
+  .board_list_wrap th{
+    font-size: 1.5rem;
+  }
+  .board_list_wrap td {
+    font-size: 1.4rem;
+  }
+  .board_list_wrap .pagination .number {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+
+
+
+
+@media(max-width:767px) {
+  .sub_visual{
+    height: 155px;
+  }
+  .sub_visual .tit_wrap h2{
+    font-size: 2.6rem;
+  }
+/* 탭메뉴 모바일 스크롤 처리 */
+  .sub_tab_wrap{
+    overflow: auto;
+/* .sub_tab 의 가로를 li들의 가로길이만큼 잡히게 하여 줄어들지 않게함 */
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .sub_tab_wrap .sub_tab li{
+    /* 스크롤하여 보여지므로 줄어들면 안됨 */
+    flex-shrink: 0;
+    /* 데스크탑에서 width:100%이였으므로 내용만큼의 크기를 가지도록 */
+    width: auto;
+  }
+  .sub_tab_wrap .sub_tab a{
+    /* 글자 줄바꿈 안되게 */
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+
+
+
+
+}

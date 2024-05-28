@@ -1,0 +1,85 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #c30606;
+  --point-color2: #907354;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+
+/* 반응형은 창에 따라 가로가 줄어야하므로 min-width필요 없음 */
+#wrap {
+  height: 1500px;
+  min-width: 1260px;
+}
+
+#header {
+  border: 2px solid yellow;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 1260px;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(52, 52, 54, 1);
+}
+#header .inner {
+  width:1180px;
+  height:100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid green;
+}
+#header .gnd_wrap .gnd{
+  display: flex;
+}
+#header .gnd_wrap {
+  border: 2px solid blue;
+  margin: 0 82px;
+}
+#header .gnd>li{
+  padding: 0 15px;
+}
+#header .gnd>li>a {
+  color: #fff;
+  font-size: 19px;
+  font-family: 'AKrobat',sans-serif;
+  display:block;
+  line-height: 100px;
+  letter-spacing: 0.12em;
+  position: relative;
+}
+#header .gnd>li>a::after{
+  content: '';
+  height: 3px;
+  background: var(--point-color1);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  display:none;
+}
+#header .gnd>li:hover>a::after{
+  display: block;
+}
+
+#container{
+  padding-top: 100px;
+}
+#container .main_slider {
+  overflow: hidden;
+  position: relative;
+  height: 900px;
+}
+#container .main_slider .slide{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.main_slider img{
+  max-width: none;
+}

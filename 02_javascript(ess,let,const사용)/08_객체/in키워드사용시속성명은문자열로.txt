@@ -1,0 +1,2 @@
+// 객체안에 속성이 있는지 확인
+console.log('model' in car);

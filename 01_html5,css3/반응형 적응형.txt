@@ -1,0 +1,5 @@
+  반응형 : 테블릿, 모바일 버전
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+적응형 : 데스크탑만있
+  <meta name="viewport" content="width=1280">
+

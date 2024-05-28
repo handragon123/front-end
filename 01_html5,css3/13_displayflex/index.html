@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- 적응형 데스크탑일 경우 뷰포트크기 = 기본그리드 + 80px -->
+  <meta name="viewport" content="width=1280">
+  <title>display</title>
+  <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+</head>
+<body>
+  <!-- 키보드접근성메뉴  -->
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <header id="header">
+      <h1>로고</h1>
+      <p>블럭요소는 위아래로 배치됨</p>
+      <a href="#">인라인요소</a>
+      <a href="#">인라인요소</a>
+      <div>
+        <img src="images/logo.svg" alt="">
+        <img src="images/logo.svg" alt="">
+        <input type="text">
+        <input type="search">
+        <select>
+          <option>주소선택</option>
+          <option>서울시</option>
+          <option>경기도</option>
+        </select>
+        <button type="button">버튼</button>
+        <nav class="gnb_wrap">
+          <ul class="gnb">
+            <li>
+              <a href="#">주메뉴</a>
+              <ul class="depth2">
+                <li><a href="#">서브</a></li>
+                <li><a href="#">서브</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+</body>
+</html>

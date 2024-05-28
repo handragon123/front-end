@@ -1,0 +1,24 @@
+.wrap {
+  padding: 20px 1px;
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+
+.save_btn {
+  padding: 0 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  display: inline-flex;
+  height: 40px;
+  align-items: center;
+  font-size: 18px;
+}
+.save_btn.active {
+  color: var(--point-color1);
+  border-color: var(--point-color1);
+}
+
+.wrap p {
+  font-size: 100px;
+}

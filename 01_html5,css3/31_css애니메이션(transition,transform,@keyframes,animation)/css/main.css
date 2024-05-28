@@ -1,0 +1,188 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #5dc591;
+  --point-color2: #907354;
+  --txt-color-400: #969696;
+  --txt-color-500: #565656;
+  --txt-color-600: #191919;
+}
+
+#wrap{
+  height: 1500px;
+}
+
+.box_wrap{
+  max-width: 1200px;
+  height: 150px;
+  border: 1px solid rosybrown;
+  margin: 0 auto;
+  position: relative;
+}
+.box_wrap .box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: bisque;
+}
+.box1 .box{
+  /* transition: all 또는 개별 속성 시간 [지연시간] [ease] */
+  /* ease가 기본값이며 점점 빨라지다가 멈출 때 느려진다 */
+  /* transition: all 1s ease; */
+  /* 가속도 */
+  /* transition: all 1s ease-in; */
+  /* 감속 */
+  /* transition: all 1s ease-out; */
+  /* 등속도 */
+  /* transition: all 1s linear; */
+  /* 베지어 곡선으로 특수한 움직임 가능 */
+  transition: all 3s linear;
+}
+/* transition은 특별한 경우가 아니면 일반적으로 hover 전에 건다. (hover에 거는 게 아님) */
+.box1:hover .box{
+  transition: all 1s cubic-bezier(0.84, -0.33,0.25,1.38);
+  transform: translateX(500px);
+}
+
+.box2{
+  display: flex;
+  height: auto;
+}
+
+/* 크기가 변경되는 요소에 transition 사용 시 개별 속성명 적어줄 것 */
+.box2 .box{
+  position: static;
+  transition: background-color 2s;
+  height: 100px;
+  width: calc(100% / 3);
+  border: 1px solid blueviolet;
+}
+.box2:hover .box{
+  background: peru;
+}
+
+@media (max-width:1200px){
+  .box2{
+    flex-wrap: wrap;
+  }
+  .box2 .box{
+    width: 100%;
+  }
+}
+
+.box3 {
+  max-width: 1200px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.box3 .box {
+  border: 2px solid red;
+  font-size: 30px;
+  transition: all 1s;
+  width: 100px;
+  height: 100px;
+  /* 회전축 중심변경가능하며 기본값은 center center */
+  transform-origin: left top;
+  /* transform-origin: -200px -200px; */
+}
+.box3:hover .box {
+    /* transform: 사용시 제자리에서 뜨며 원래위치는 막힘 */
+    /* transform: scale(4); */
+    transform: rotatez(-180deg) skewX(45deg);
+}
+
+
+
+
+
+.box4 {
+  max-width: 1200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+/* 0% ,100%는 요소의 원래값으로 세팅됨 */
+/* 100%까지 진행후 0%로 돌아옴 */
+@keyframes movebox {
+  40% {
+    transform: translateX(1100px);
+  }
+  50%{
+    transform: translate(1100px, 100px);
+  }
+  90%{
+    transform: translate(0px, 100px);
+  }
+}
+.box4 .box {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: movebox 2s linear forwards infinite;
+  /* 100퍼에서 멈출때 사용 forwards */
+  /* animation-fill-mode: forwards; */
+  width: 100px;
+  height: 100px;
+  background: skyblue;
+}
+.box4:hover .box{
+  /* 애니메이션 일시정지 */
+  animation-play-state: paused;
+}
+
+.box5 {
+  max-width: 1200px;
+  height: 150px;
+  border: 1px solid salmon;
+  margin: 0 auto;
+}
+
+@keyframes showTxt {
+  100% {
+    width: 470px;
+  }
+}
+.box5 .box {
+  /* ease값에 steps로 타이포애니메션 가능 */
+  animation: showTxt 2s steps(10) forwards;
+  font-size: 70px;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.box6 {
+  max-width: 1200px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+@keyframes showclock {
+  50% {
+    transform: rotateZ(-45deg);
+  }
+}
+/* 반복 애니메이션은 ease-in-out이 좋음 */
+.box6 .clock {
+  animation: showclock 2s infinite ease-in-out;
+  width: 100px;
+  border: 1px soild blue;
+  transform: rotateZ(45deg);
+  transform-origin: center top;
+}
+.box6 .clock .line {
+  width: 5px;
+  height: 150px;
+  border: 1px solid rebeccapurple;
+  margin: 0 auto;
+}
+.box6 .clock .circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: yellowgreen;
+  margin: 0 auto;
+}

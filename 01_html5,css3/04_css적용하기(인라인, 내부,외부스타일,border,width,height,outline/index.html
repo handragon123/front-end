@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인라인, 내부 ,외부스타일</title>
+  <link rel="stylesheet" href = "css/common.css">
+  <style>
+    /* 내부스타일, 무조건 header에 작성 */
+    /* 한페이지에만 적용가능하므로 사용하지않음 */
+    #header .logo {
+      border: 5px solid yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <!-- 인라인 스타일은 스크립트에 의해 생성됨 -->
+    <header id="header" style="height: 200px; border: 5px solid red;">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="GS">
+        </a>
+      </h1>
+      <p>외부스타일 연결하기</p>
+    </header>
+    <main id="container">
+      <section class="section1">
+        <h2>섹션제목</h2>
+        <p>섹션내용 입니다.</p>
+      </section>
+      
+
+    </main>
+
+  </div>
+</body>
+</html>
